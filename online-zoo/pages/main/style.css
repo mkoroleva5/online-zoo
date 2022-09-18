@@ -3,6 +3,13 @@
 }
 
 @font-face {
+    font-family: "Roboto"; 
+    src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 400; 
+} 
+
+@font-face {
     font-family: "RobotoMedium"; 
     src: url("/assets/fonts/Roboto-Medium.ttf") format("truetype"); 
     font-style: normal; 
@@ -47,6 +54,7 @@ body {
     position: relative;
     width: 82px;
     height: 52px;
+    margin-right: 22px;
     border: solid white 1px;
     border-radius: 2px;
 }
@@ -60,8 +68,8 @@ body {
 
 .logo-bamboo {
     position: absolute;
-    bottom: 4.39px;
-    left: 7.13px;
+    bottom: 6.2px;
+    left: 8.5px;
 }
 
 .nav-list {
@@ -74,7 +82,7 @@ body {
 .nav-link {
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .nav-link:hover {
@@ -82,8 +90,8 @@ body {
     cursor: pointer;
 }
 
-.header-credits {
-
+.nav-link:active {
+    color: #4B9200;
 }
 
 .main {
@@ -96,9 +104,11 @@ body {
     position: relative;
     width: 100%;
     height: 780px;
+    margin-bottom: 140px;
     background-image: url('/assets/images/Giant\ Panda.png');
     background-repeat: no-repeat;
     background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .orange-circle {
@@ -129,6 +139,7 @@ body {
 
 .watch-title span {
     color: #FFEE2E;
+    transform: translateX(10px);
 }
 
 .watch-button {
@@ -144,6 +155,7 @@ body {
     border-radius: 25px;
     border: none;
     color: white;
+    font-size: 16px;
     text-transform: uppercase;
     transition: 0.2s;
 }
@@ -157,3 +169,60 @@ body {
 .watch-button:active {
     background: #4B9200;
     transform: scale(1.0);
+}
+
+.backstage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 72.5%;
+    height: 403px;
+    margin: 0 auto;
+    margin-bottom: 180px;
+}
+
+.backstage-image {
+    display: flex;
+    width: 52.45%;
+    height: 100%;
+    background-image: url('/assets/images/bamboo-cap.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backstage-text {
+    width: 47.55%;
+    height: 100%;
+    padding-left: 87px;
+    font-family: "Roboto", sans-serif;
+}
+
+.backstage-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.backstage-subtitle {
+    font-size: 24px;
+    margin-bottom: 34px;
+}
+
+.backstage-title-description {
+    margin-bottom: 54px;
+    line-height: 135%;
+}
+
+.backstage-description {
+    line-height: 135%;
+}
+
+.flower-top {
+    width: 293px;
+    height: 605px;
+    position: absolute;
+    top: 792px;
+    right: 10px;
+    background-image: url('/assets/images/flower_foto1.png');
+    background-repeat: no-repeat;
+}
