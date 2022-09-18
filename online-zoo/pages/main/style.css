@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto"; 
+    src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "RobotoBold"; 
+    src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 700; 
+} 
+
+body {
+    max-width: 1600px;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    max-width: 1600px; 
+    color: white;
+    background-color: black;
+    z-index: 100;   
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 82px;
+    height: 52px;
+    border: solid white 1px;
+    border-radius: 2px;
+}
+
+.logo-text {
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    word-wrap: break-word;
+}
+
+.logo-bamboo {
+    position: absolute;
+    bottom: 4.39px;
+    left: 7.13px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 58px;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #F9804B;
+    cursor: pointer;
+}
+
+.header-credits {
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.watch-block {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 780px;
+    background-image: url('/assets/images/Giant\ Panda.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orange-circle {
+    background-image: url('/assets/icons/Ellipse\ 6.svg');
+    position: absolute;
+    top: 90px;
+    left: 55%;
+    width: 465px;
+    height: 465px;
+}
+
+.watch-title {
+    font-family: "RobotoBold"; 
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 166px;
+    left: 60%;
+    width: 500px;
+    height: 400px;
+    color: white;
+    font-size: 106.496px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 75%;
+    text-transform: uppercase;
+}
+
+.watch-title span {
+    color: #FFEE2E;
+}
