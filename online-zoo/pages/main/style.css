@@ -3,10 +3,10 @@
 }
 
 @font-face {
-    font-family: "Roboto"; 
-    src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-family: "RobotoMedium"; 
+    src: url("/assets/fonts/Roboto-Medium.ttf") format("truetype"); 
     font-style: normal; 
-    font-weight: normal; 
+    font-weight: 500; 
 } 
 
 @font-face {
@@ -18,7 +18,10 @@
 
 body {
     max-width: 1600px;
-    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    font-family: "RobotoMedium", sans-serif;
+    font-weight: 500; 
+    font-size: 16px;
 }
 
 .header {
@@ -75,7 +78,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #F9804B;
+    color: #FE9013;
     cursor: pointer;
 }
 
@@ -101,8 +104,8 @@ body {
 .orange-circle {
     background-image: url('/assets/icons/Ellipse\ 6.svg');
     position: absolute;
-    top: 90px;
-    left: 55%;
+    top: 92px;
+    left: calc(50% - 465px/2 + 239.5px);
     width: 465px;
     height: 465px;
 }
@@ -113,7 +116,7 @@ body {
     flex-wrap: wrap;
     position: absolute;
     top: 166px;
-    left: 60%;
+    left: calc(50% - 500.31px/2 + 330.15px);
     width: 500px;
     height: 400px;
     color: white;
@@ -127,3 +130,30 @@ body {
 .watch-title span {
     color: #FFEE2E;
 }
+
+.watch-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 298px;
+    height: 54px;
+    position: absolute;
+    top: 626px;
+    left: calc(50% - 298px/2 + 332px);
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.watch-button:hover {
+    background: #E47209;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.watch-button:active {
+    background: #4B9200;
+    transform: scale(1.0);
