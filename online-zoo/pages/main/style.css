@@ -3,6 +3,13 @@
 }
 
 @font-face {
+    font-family: "RobotoLight"; 
+    src: url("/assets/fonts/Roboto-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 300; 
+} 
+
+@font-face {
     font-family: "Roboto"; 
     src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype"); 
     font-style: normal; 
@@ -104,10 +111,10 @@ body {
     position: relative;
     width: 100%;
     height: 780px;
-    margin-bottom: 140px;
-    background-image: url('/assets/images/Giant\ Panda.png');
+    background-image: url('/assets/images/Giant\ Panda.jfif');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -172,13 +179,20 @@ body {
 }
 
 .backstage {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.backstage-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 72.5%;
     height: 403px;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 140px;
     margin-bottom: 180px;
 }
 
@@ -186,7 +200,7 @@ body {
     display: flex;
     width: 52.45%;
     height: 100%;
-    background-image: url('/assets/images/bamboo-cap.png');
+    background-image: url('/assets/images/bamboo-cap.jfif');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -221,8 +235,244 @@ body {
     width: 293px;
     height: 605px;
     position: absolute;
-    top: 792px;
-    right: 10px;
+    top: -128px;
+    right: -313px;
     background-image: url('/assets/images/flower_foto1.png');
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pets {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pets-cards-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.pets-cards-block {
+    width: 73%;
+    height: 872px;
+    display: grid;
+    grid-template-columns: repeat(4, 366px);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    position: relative;
+    left: 220px;
+    overflow-x: hidden;
+}
+
+.pet-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
+    cursor: pointer;
+}
+
+.pet-photo {
+    width: 100%;
+    height: 86%;
+    border-radius: 4px 4px 0 0;
+}
+
+.pet-card:nth-of-type(1) > .pet-photo {
+    background-image: url('/assets/images/pandas.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-card:nth-of-type(2) > .pet-photo {
+    background-image: url('/assets/images/eagles.jfif');
+    background-repeat: no-repeat;
+    background-position: 23.5%;
+    background-size: 177% 100%;
+}
+
+.pet-card:nth-of-type(3) > .pet-photo {
+    background-image: url('/assets/images/gorillas_1.jfif');
+    background-repeat: no-repeat;
+    background-position: 24%;
+    background-size: 167% 100%;
+}
+
+.pet-card:nth-of-type(4) > .pet-photo {
+    background-image: url('/assets/images/alligators.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-card:nth-of-type(5) > .pet-photo {
+    background-image: url('/assets/images/sloth.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-card:nth-of-type(6) > .pet-photo {
+    background-image: url('/assets/images/cheetahs.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-card:nth-of-type(7) > .pet-photo {
+    background-image: url('/assets/images/penguins.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-card:nth-of-type(8) > .pet-photo {
+    background-image: url('/assets/images/gorillas_2.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pet-text {
+    position: relative;
+    width: 100%;
+    height: 14%;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    padding: 10px 10px 10px 15px;
+}
+
+.pet-title {
+    font-family: "RobotoBold";
+    text-transform: uppercase;
+}
+
+.pet-destination {
+    font-family: "RobotoLight";
+    font-size: 15px;
+}
+
+.pet-card:nth-of-type(1) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(3) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(5) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(8) > .pet-text > .pet-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 12px;
+    right: 8px;
+    background: url('/assets/icons/banana_icon.svg') no-repeat center, url('/assets/icons/bamboo_icon.svg') no-repeat center;
+}
+
+.pet-card:nth-of-type(2) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(4) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(6) > .pet-text > .pet-icon,
+.pet-card:nth-of-type(7) > .pet-text > .pet-icon {
+    position: absolute;
+    width: 48px;
+    height: 38px;
+    bottom: 12px;
+    right: 8px;
+    background: url('/assets/icons/fish_icon.svg') no-repeat 100% 75%, url('/assets/icons/steak_icon.svg') no-repeat 30% 30%;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-button {
+    width: 62px;
+    height: 62px;
+    background-color: #FE9013;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-left {
+    position: absolute;
+    left: 140px;
+}
+
+.button-right {
+    position: absolute;
+    right: 140px;
+}
+
+.button-left img,
+.button-right img {
+    fill: white;
+}
+
+.slider-button:hover {
+    background: #E47209;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.slider-button:active {
+    background: #4B9200;
+    transform: scale(1.0);
+}
+
+.flower-left {
+    width: 880px;
+    height: 460px;
+    position: absolute;
+    bottom: 0;
+    left: -588px;
+    background-image: url('/assets/images/flower_foto2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flower-right {
+    width: 368px;
+    height: 275px;
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    background-image: url('/assets/images/2771deaf5a5f17d82ccbd9f5105b7ffe.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+.choose-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 298px;
+    height: 54px;
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: #FE9013;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.choose-button:hover {
+    background: #E47209;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.choose-button:active {
+    background: #4B9200;
+    transform: scale(1.0);
 }
