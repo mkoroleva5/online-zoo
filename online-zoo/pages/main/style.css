@@ -245,12 +245,13 @@ body {
 .pets {
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .pets-cards-wrapper {
     position: relative;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 }
 
 .pets-cards-block {
@@ -361,7 +362,6 @@ body {
 
 .text-hover {
     color: white;
-
     transform: translateY(-220px);
     font-size: 24px;
 }
@@ -463,7 +463,8 @@ body {
     transform: rotateY(180deg);
 }
 
-.choose-button {
+.choose-button,
+.feed-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -481,13 +482,132 @@ body {
     transition: 0.2s;
 }
 
-.choose-button:hover {
+.choose-button:hover,
+.feed-button:hover {
     background: #E47209;
     transform: scale(1.03);
     cursor: pointer;
 }
 
-.choose-button:active {
+.choose-button:active,
+.feed-button:active {
     background: #4B9200;
     transform: scale(1.0);
+}
+
+.donations {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    opacity: 0.9;
+}
+
+.donations-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 72.5%;
+    height: 835px;
+    margin: 69px 220px 100px 220px;
+    padding-top: 40px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.donations-title {
+    font-size: 48px;
+    color: #FE9013;
+    margin-bottom: 34px;
+    text-align: center;
+    line-height: 120%;
+}
+
+.donations-text-1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    padding-left: 99px;
+    line-height: 120%;
+}
+
+.donations-text-2 {
+    font-family: "RobotoMedium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 10px;
+    padding-left: 99px;
+}
+
+.donations-text-3 {
+    font-size: 16px;
+    margin-bottom: 60px;
+    padding-right: 190px;
+    padding-left: 99px;
+    line-height: 135%;
+}
+
+.donations-link {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid #FE9013;
+    transition: 0.2s;
+}
+
+.donations-link:hover {
+    color:#4B9200;
+    border-bottom: 2px solid #4B9200;
+}
+
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.paying-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+}
+
+.paying-card {
+    display: flex;
+    flex-direction: column;
+    width: 168px;
+}
+
+.paying-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 168px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #E47209;
+    border-radius: 5px;
+}
+
+.arrow {
+    width: 69px;
+    height: 36px;
+    margin: 60px 31px 0 30px;
+    background-image: url('/assets/icons/arrow.svg');
+    background-repeat: no-repeat;
+}
+
+.paying-card-text {
+    line-height: 130%;
+}
+
+.feed-button {
+    margin-bottom: 59px;
+    background: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
 }
