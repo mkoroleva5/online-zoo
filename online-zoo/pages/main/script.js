@@ -6,8 +6,6 @@ const cardsText = document.querySelectorAll('.pet-text');
 const cardsTitle = document.querySelectorAll('.pet-title');
 const cardsDestination = document.querySelectorAll('.pet-destination');
 
-
-
 for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener('mouseover', () => {
         cardsPhoto[i].classList.add('card-transform');

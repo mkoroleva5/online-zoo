@@ -31,7 +31,6 @@
 } 
 
 body {
-    max-width: 1600px;
     margin: 0 auto;
     font-family: "RobotoMedium", sans-serif;
     font-weight: 500; 
@@ -44,8 +43,7 @@ body {
     align-items: center;
     width: 100%;
     height: 80px;
-    position: absolute;
-    max-width: 1600px; 
+    position: absolute; 
     color: white;
     background-color: black;
     z-index: 100;   
@@ -179,19 +177,21 @@ body {
 }
 
 .backstage {
+    position: relative;
     width: 100%;
     overflow-x: hidden;
 }
 
 .backstage-wrapper {
+    max-width: 1160px;
+    width: 100%;
+    height: 403px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 72.5%;
-    height: 403px;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 140px;
     margin-bottom: 170px;
 }
@@ -235,8 +235,8 @@ body {
     width: 293px;
     height: 605px;
     position: absolute;
-    top: -128px;
-    right: -313px;
+    top: 12px;
+    right: -102px;
     background-image: url('/assets/images/flower_foto1.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -250,20 +250,21 @@ body {
 
 .pets-cards-wrapper {
     position: relative;
-    width: 100%;
+    width: 1320px;
+    margin: 0 auto;
     margin-bottom: 70px;
 }
 
 .pets-cards-block {
-    width: 74%;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
     height: 892px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(4, 366px);
     grid-column-gap: 30px;
     grid-row-gap: 20px;
-    position: relative;
-    left: 210px;
     overflow-x: hidden;
 }
 
@@ -362,7 +363,7 @@ body {
 
 .text-hover {
     color: white;
-    transform: translateY(-220px);
+    transform: translateY(-366px);
     font-size: 24px;
 }
 
@@ -416,12 +417,12 @@ body {
 
 .button-left {
     position: absolute;
-    left: 140px;
+    left: 0px;
 }
 
 .button-right {
     position: absolute;
-    right: 140px;
+    right: 0px;
 }
 
 .button-left img,
@@ -496,8 +497,11 @@ body {
 }
 
 .donations {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 140px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
 }
@@ -506,7 +510,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 72.5%;
+    max-width: 1160px;
+    width: 100%;
     height: 835px;
     margin: 69px 220px 100px 220px;
     padding-top: 40px;
@@ -610,4 +615,157 @@ body {
 .feed-button {
     margin-bottom: 59px;
     background: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.testimonials-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.testimonials-wrapper {
+    position: relative;
+    width: 1162px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.testimonials-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 268px);
+    grid-column-gap: 30px;
+    width: 100%;
+    max-width: 1160px;
+    margin-bottom: 21px;
+}
+
+.testimonial-card {
+    width: 268px;
+    height: 391px;
+    border: 2px solid transparent;
+    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 20px;
+}
+
+.testimonial-inner-card {
+    margin: auto;
+    width: 264px;
+    height: 387px;
+    padding: 15px 13px 17px 14px;
+    background-color:#F1F3F2;
+    border-radius: 20px;
+    font-family: "RobotoLight", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.testimonial-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.testimonial-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-circs {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.testimonial-avatar {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testimonial-card:nth-of-type(1) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('/assets/icons/avatar.svg');
+}
+
+.testimonial-card:nth-of-type(2) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('/assets/images/Oskar_Samborsky.jfif');
+    background-size: cover;
+}
+
+.testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('/assets/images/Fredericka_Michelin.jfif');
+    background-size: cover;
+    background-position: 30%;
+}
+
+.testimonial-card:nth-of-type(4) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('/assets/images/Mila_Riksha.jfif');
+    background-size: cover;
+}
+
+.testimonial-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.testimonial-location,
+.testimonial-time,
+.testimonial-separator {
+    color: #BDBDBD;
+}
+
+.testimonial-feedback {
+    height: 302px;
+    color: #767474;
+    overflow: hidden;
+}
+
+.testimonial-feedback p {
+    margin: 0;
+    line-height: 18px;
+}
+
+.testimonials-slider {
+    margin-bottom: 31px;
+}
+
+.feedback-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 298px;
+    height: 54px;
+    margin-bottom: 180px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.2s;    
+}
+
+.flower-bottom {
+    width: 300px;
+    height: 295.5px;
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    background-image: url('/assets/images/leaf.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: matrix(-0.86, -0.5, -0.5, 0.86, 0, 0);
 }
