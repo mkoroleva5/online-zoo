@@ -65,8 +65,9 @@ body {
 }
 
 .logo-text {
-    text-align: center;
+    font-family: "Roboto", sans-serif;
     font-size: 19px;
+    text-align: center;
     color: white;
     word-wrap: break-word;
 }
@@ -484,14 +485,18 @@ body {
 }
 
 .choose-button:hover,
-.feed-button:hover {
+.feed-button:hover,
+.feedback-button:hover,
+.donation-button:hover {
     background: #E47209;
     transform: scale(1.03);
     cursor: pointer;
 }
 
 .choose-button:active,
-.feed-button:active {
+.feed-button:active,
+.feedback-button:active,
+.donation-button:active {
     background: #4B9200;
     transform: scale(1.0);
 }
@@ -620,23 +625,22 @@ body {
 .testimonials {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .testimonials-title {
     font-family: "Roboto", sans-serif;
     font-size: 36px;
-    margin: auto;
     margin-bottom: 50px;
 }
 
 .testimonials-wrapper {
     position: relative;
     width: 1162px;
-    margin: auto;
     overflow-x: hidden;
 }
 
@@ -738,10 +742,40 @@ body {
 }
 
 .testimonials-slider {
+    display: flex;
+    justify-content: center;
     margin-bottom: 31px;
 }
 
-.feedback-button {
+.slider-outer-line {
+    position: relative;
+    width: 52%;
+    height: 8px;
+    border: 1px solid transparent;
+    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 5px;
+    
+}
+
+.slider-inner-line {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F7F6;
+}
+
+.slider-toddler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19.2%;
+    height: 6px;
+    border-radius: 5px;
+    background-color:#FE9013;
+    cursor: pointer;
+}
+
+.feedback-button,
+.donation-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -762,10 +796,37 @@ body {
     width: 300px;
     height: 295.5px;
     position: absolute;
-    bottom: 0;
-    right: -50px;
+    bottom: -77px;
+    right: -110px;
     background-image: url('/assets/images/leaf.png');
     background-repeat: no-repeat;
     background-size: cover;
     transform: matrix(-0.86, -0.5, -0.5, 0.86, 0, 0);
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 443px;
+    color: white;
+    background-color: black;
+}
+
+.footer-wrapper {
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1.5fr 1.5fr 2.5fr; 
+    gap: 2px 2px; 
+    grid-template-areas: 
+      "logo subscription"
+      "donation-block donation-block"
+      "social-media navigation";   
+    width: 1160px;
+    margin-top: 41px;
+}
+
+.donation-block { grid-area: donation-block; }
+.subscription { grid-area: subscription; }
+.social-media { grid-area: social-media; }
+.navigation { grid-area: navigation; }
