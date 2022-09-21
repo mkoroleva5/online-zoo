@@ -18,3 +18,20 @@ for (let i = 0; i < cards.length; i++) {
         cardsDestination[i].classList.remove('text-hover');
     })
 }
+
+// Social media animation
+
+const socialMediaItems = document.querySelectorAll('.social-media-item');
+const socialMediaIcons = document.querySelectorAll('.social-media-icon');
+const socialMediaLinks = document.querySelectorAll('.social-media-link');
+
+for (let i = 0; i < cards.length; i++) {
+    socialMediaItems[i].addEventListener('mouseover', () => {
+        socialMediaIcons[i].classList.add('social-media-icon-hover');
+        socialMediaLinks[i].classList.add('social-media-link-hover');
+    })
+    socialMediaItems[i].addEventListener('mouseout', () => {
+        socialMediaIcons[i].classList.remove('social-media-icon-hover');
+        socialMediaLinks[i].classList.remove('social-media-link-hover');
+    })
+}
