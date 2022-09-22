@@ -183,7 +183,8 @@ body {
     background: rgba(255, 255, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    padding: 40px 92px;
+    padding: 40px 92px 35px 92px;
+    margin-bottom: 179px;
 }
 
 .info-title {
@@ -200,16 +201,345 @@ body {
     font-weight: 400;
     font-size: 24px;
     color: black;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
+.diet-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 10px;
+    color: black;
+}
 
+.diet-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.diet-amount-number {
+    font-family: "RobotoMedium", sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+    margin: 0;
+    padding: 0;
+}
 
+.diet-amount-description {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
 
+.diet-separator {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 70px 0 3px;
+}
 
+.diet-separator:before {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: black;
+    border-radius: 10px;
+    transform: rotate(45deg);
+}
 
+.diet-separator:after {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: black;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+}
 
+.diet-animal {
+    width: 284px;
+    height: 246px;
+    background-image: url('../../assets/icons/panda_widget1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-20px);
+    margin-bottom: 30px;
+}
+
+.form-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    padding-left: 5px;
+    margin-bottom: 17px;
+}
+
+.form-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 27px;
+    background: #404950;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.form-line-amount {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 52px;
+}
+
+.form-line-amount-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-line-amount-item:nth-of-type(1),
+.form-line-amount-item:nth-of-type(2),
+.form-line-amount-item:nth-of-type(3) {
+    margin-right: 58px;
+}
+
+.form-line-amount-item:nth-of-type(4),
+.form-line-amount-item:nth-of-type(5),
+.form-line-amount-item:nth-of-type(6) {
+    margin-right: 72px;
+}
+
+.form-line-amount-item:nth-of-type(7) {
+    margin-right: 89px;
+}
+
+.amount-text {
+    font-family: "RobotoMedium", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color:#333B41;
+    margin: 0;
+}
+
+.form-line-amount-item object {
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+.active-dollar {
+    filter: invert(64%) sepia(53%) saturate(2467%) hue-rotate(348deg) brightness(99%) contrast(103%);
+}
+
+.active-amount {
+    color:#FE9013;
+}
+
+.hover-dollar {
+    filter: invert(64%) sepia(53%) saturate(2467%) hue-rotate(348deg) brightness(99%) contrast(103%);
+}
+
+.hover-amount {
+    color:#FE9013;
+}
+
+.form-inner-line {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 78%;
+    height: 3px;
+    background-color: #72828E;
+}
+
+.line-dot-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.line-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFEE2E;
+    border-radius: 50%;
+}
+
+.active-dot {
+    position: relative;
+    z-index: 1;
+}
+
+.active-dot:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #FE9013;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+.active-dot:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #FE9013;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+}
+
+.hover-dot {
+    position: relative;
+    z-index: 1;
+}
+
+.hover-dot:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #FE9013;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+.hover-dot:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #FE9013;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+}
+    
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amount-input {
+    position: relative;
+    width: 270px;
+    height: 55px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: url(../../assets/icons/dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    filter: invert(66%) sepia(10%) saturate(127%) hue-rotate(163deg) brightness(89%) contrast(89%);
+}
+
+.amount-input:focus {
+    filter: invert(38%) sepia(96%) saturate(200%) hue-rotate(56deg) brightness(90%) contrast(101%);
+}
+
+.input-dollar {
+    position: absolute;
+    right: 10px;
+}
+
+.period-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    margin-right: 65px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+.period-form label {
+    cursor: pointer;
+}
+
+.period-option {
+    margin-left: 45px;
+    transform: translateX(10px);
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.period-option-dot {
+    position: relative;
+    top: 2px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #FE9013;
+    border-radius: 50%;
+}
+
+.hover-option-dot {
+    transform: scale(1.1);
+}
+
+.active-option-dot {
+    border: none;
+    background-color: #4B9200;
+}
+
+.share-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 .feed-button {
     display: flex;
@@ -218,7 +548,7 @@ body {
     width: 298px;
     height: 54px;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 31px;
     background-color: #E47209;
     background-image: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
     border-radius: 25px;
