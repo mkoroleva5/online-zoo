@@ -183,7 +183,8 @@ body {
     position: absolute;
     top: 626px;
     left: calc(50% - 298px/2 + 332px);
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background-color: #E47209;
+    background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 25px;
     border: none;
     color: white;
@@ -263,7 +264,7 @@ body {
     height: 605px;
     position: absolute;
     top: 12px;
-    right: -102px;
+    right: -92px;
     background-image: url('../../assets/images/flower_foto1.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -473,7 +474,7 @@ body {
     height: 460px;
     position: absolute;
     bottom: 0;
-    left: -595px;
+    left: -587px;
     background-image: url('../../assets/images/flower_foto2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,7 +485,7 @@ body {
     height: 275px;
     position: absolute;
     bottom: 0;
-    right: -10px;
+    right: 0;
     background-image: url('../../assets/images/2771deaf5a5f17d82ccbd9f5105b7ffe.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -645,7 +646,8 @@ body {
 
 .feed-button {
     margin-bottom: 59px;
-    background: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
+    background-color: #E47209;
+    background-image: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
 }
 
 .testimonials {
@@ -682,16 +684,16 @@ body {
 
 .testimonial-card {
     width: 268px;
-    height: 391px;
-    border: 2px solid transparent;
-    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    height: 392px;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 20px;
 }
 
 .testimonial-inner-card {
     margin: auto;
+    margin-top: 2px;
     width: 264px;
-    height: 387px;
+    height: 388px;
     padding: 15px 13px 17px 14px;
     background-color:#F1F3F2;
     border-radius: 20px;
@@ -779,7 +781,7 @@ body {
     width: 52%;
     height: 8px;
     border: 1px solid transparent;
-    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 5px;
 }
 
@@ -811,7 +813,8 @@ body {
     border: none;
     border-radius: 5px;
     color: white;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background-color:#E47209;
+    background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     font-family: "RobotoMedium", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
@@ -823,7 +826,7 @@ body {
     height: 295.5px;
     position: absolute;
     bottom: -77px;
-    right: -117px;
+    right: -107px;
     background-image: url('../../assets/images/leaf.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -886,7 +889,6 @@ body {
     background-color: black;
     border: 1px solid #F9804B;
     border-radius: 2px;
-    /*-webkit-filter: brightness(50%);   */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 

@@ -49,4 +49,3 @@ for (let i = 0; i < creditsLinkText.length; i++) {
         creditsLinkText[i].classList.remove('credits-link-hover');
     })
 }
-
