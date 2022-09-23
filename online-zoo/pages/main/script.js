@@ -1,29 +1,3 @@
-// Swiper
-
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
-const swiper = new Swiper('.swiper', {
-
-    modules: [Navigation, Pagination],
-    ...
-});
-
-const swiper = new Swiper('.swiper', {
-    direction: 'vertical',
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-});
-
 // Cards animation
 
 const cards = document.querySelectorAll('.pet-card');

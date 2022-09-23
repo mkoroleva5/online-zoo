@@ -335,7 +335,6 @@ body {
     background-repeat: no-repeat;
     background-position: 24%;
     background-size: 167% 100%;
-    filter: brightness(150%) contrast(85%);
 }
 
 .pet-card:nth-of-type(4) > .pet-photo {
