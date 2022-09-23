@@ -68,8 +68,10 @@ body {
     width: 82px;
     height: 52px;
     margin-right: 22px;
+    background-color: transparent;
     border: solid white 1px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .logo-text {
@@ -144,7 +146,8 @@ body {
 }
 
 .orange-circle {
-    background-image: url('../../assets/icons/Ellipse\ 6.svg');
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
     position: absolute;
     top: 92px;
     left: calc(50% - 465px/2 + 239.5px);
@@ -332,6 +335,7 @@ body {
     background-repeat: no-repeat;
     background-position: 24%;
     background-size: 167% 100%;
+    filter: brightness(150%) contrast(85%);
 }
 
 .pet-card:nth-of-type(4) > .pet-photo {
@@ -391,8 +395,12 @@ body {
 
 .text-hover {
     color: white;
-    transform: translateY(-366px);
-    font-size: 24px;
+    transform: translateY(-70px);
+    font-size: 22px;
+}
+
+.icon-hover {
+    transform: translateY(-55px);
 }
 
 .card-transform {
@@ -410,6 +418,7 @@ body {
     bottom: 12px;
     right: 8px;
     background: url('../../assets/icons/banana_icon.svg') no-repeat center, url('../../assets/icons/bamboo_icon.svg') no-repeat center;
+    transition: 0.2s;
 }
 
 .pet-card:nth-of-type(2) > .pet-text > .pet-icon,
@@ -422,6 +431,7 @@ body {
     bottom: 12px;
     right: 8px;
     background: url('../../assets/icons/fish_icon.svg') no-repeat 100% 75%, url('../../assets/icons/steak_icon.svg') no-repeat 30% 30%;
+    transition: 0.2s;
 }
 
 .slider-buttons {
@@ -533,7 +543,7 @@ body {
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 140px;
+    margin-bottom: 141px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
 }
@@ -546,7 +556,7 @@ body {
     width: 100%;
     height: 835px;
     margin: 69px 210px 100px 210px;
-    padding-top: 40px;
+    padding-top: 37px;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
@@ -556,7 +566,7 @@ body {
 .donations-title {
     font-size: 48px;
     color: #FE9013;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
     text-align: center;
     line-height: 120%;
 }
@@ -605,7 +615,7 @@ body {
 
 .how-it-works-title {
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 }
 
 .paying-block {
@@ -645,6 +655,7 @@ body {
 }
 
 .feed-button {
+    margin-top: 5px;
     margin-bottom: 59px;
     background-color: #E47209;
     background-image: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
@@ -663,7 +674,7 @@ body {
 .testimonials-title {
     font-family: "Roboto", sans-serif;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 .testimonials-wrapper {
@@ -679,23 +690,18 @@ body {
     grid-column-gap: 30px;
     width: 100%;
     max-width: 1160px;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
 }
 
 .testimonial-card {
-    width: 268px;
-    height: 392px;
-    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-    border-radius: 20px;
-}
-
-.testimonial-inner-card {
     margin: auto;
     margin-top: 2px;
-    width: 264px;
-    height: 388px;
-    padding: 15px 13px 17px 14px;
-    background-color:#F1F3F2;
+    width: 268px;
+    height: 392px;
+    padding: 13px 13px 17px 14px;
+    background: linear-gradient(#F1F3F2, #F1F3F2) padding-box,
+    linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    border: 2px solid transparent;
     border-radius: 20px;
     font-family: "RobotoLight", sans-serif;
     font-size: 15px;
@@ -706,7 +712,7 @@ body {
 .testimonial-info {
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .testimonial-description {
@@ -734,6 +740,7 @@ body {
 .testimonial-card:nth-of-type(2) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Oskar_Samborsky.jfif');
     background-size: cover;
+    background-position: 100% 15%;
 }
 
 .testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
@@ -772,34 +779,76 @@ body {
 
 .testimonials-slider {
     display: flex;
-    justify-content: center;
-    margin-bottom: 31px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 28px;
 }
 
-.slider-outer-line {
-    position: relative;
+.input-range {
     width: 52%;
     height: 8px;
-    border: 1px solid transparent;
-    background: linear-gradient(rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-    border-radius: 5px;
+    z-index: 100;
 }
 
-.slider-inner-line {
-    width: 100%;
-    height: 100%;
-    background-color: #F5F7F6;
+input[type=range] {
+    background: transparent;
+    -webkit-appearance: none;
+}
+  
+input[type=range]:focus {
+    outline: none; 
+}
+  
+input[type=range]::-ms-track {
+    cursor: pointer;
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
 }
 
-.slider-toddler {
-    position: absolute;
-    top: 0;
-    left: 0;
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 19.2%;
-    height: 6px;
+    height: 7px;
     border-radius: 5px;
     background-color:#FE9013;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 19.2%;
+    height: 7px;
+    border-radius: 5px;
+    background-color:#FE9013;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.06);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 52%;
+    height: 8px;
+    cursor: pointer;
+    background: linear-gradient(#F1F3F2, #F1F3F2) padding-box,
+    linear-gradient(0deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    border: 0.5px solid transparent;
+    border-radius: 5px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 52%;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(#F1F3F2, #F1F3F2) padding-box,
+    linear-gradient(0deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    border: 0.5px solid transparent;
+    border-radius: 5px;
 }
 
 .feedback-button,
@@ -889,11 +938,17 @@ body {
     background-color: black;
     border: 1px solid #F9804B;
     border-radius: 2px;
+    outline: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#email:active {
+#email:focus {
     border: 1px solid #4B9200;
+}
+
+#email:invalid {
+    border: 1px solid #D31414;
+    color: #D31414;
 }
 
 .submit-button {
@@ -905,15 +960,21 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/*
 .submit-button:hover {
     color: #4B9200;
     transform: scale(1.03);
 }
-
+*/
 .submit-button:active {
+    color: #4B9200;
     border: 1px solid #4B9200;
     transform: scale(1);
+}
+
+#email:invalid .submit-button {
+    color: #D31414;
+    border: 1px solid #D31414;
 }
 
 .donation-button {
@@ -945,19 +1006,25 @@ body {
     cursor: pointer;
 }
 
-.social-media-list li img {
+.social-media-icon img {
     margin: 0 auto;
     vertical-align: middle;
 }
-  
-.social-media-list li p {
-    display: inline;
-}
-  
+
 .social-media-link {
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
     transition: 0.2s;
+}
+
+.social-media-link:active .social-media-icon {
+    background-color:#4B9200;
+}
+
+.social-media-link:active {
+    color:#4B9200;
 }
 
 .social-media-icon {
@@ -971,14 +1038,6 @@ body {
     border-radius: 50%;
     background-color: rgba(196, 196, 196, 0.5);
     transition: 0.2s;
-}
-
-.social-media-icon-hover {
-    background-color: #4B9200;
-}
-
-.social-media-link-hover {
-    color: #4B9200;
 }
 
 .footer-navigation {
@@ -998,7 +1057,7 @@ body {
 }
 
 .credits-link {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 

@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Zoo</title>
     <link href="style.css" rel="stylesheet">
-    <link rel="icon" href="../../assets/icons/panda_widget1.svg">
+    <link rel="icon" href="../../assets/icons/panda_icon.png">
 </head>
 <body>
     <header class="header">
         <div class="nav-wrapper">
-            <div class="logo">
-                <h1 class="logo-text">PetStory online</h1>
-                <img class="logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
-            </div>
+            <form action="../../pages/main/index.html">
+                <button class="logo">
+                    <h1 class="logo-text">PetStory online</h1>
+                    <img class="logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
+                </button>
+            </form>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="../main/index.html" class="nav-link">About</a></li>
                     <li><a href="#map" class="nav-link">Map</a></li>
                     <li><a href="#zoos" class="nav-link">Zoos</a></li>
-                    <li><a href="#donate" class="nav-link active-link">Donate</a></li>
+                    <li><a href="../../pages/donate/index.html" class="nav-link active-link">Donate</a></li>
                     <li><a href="#contacts" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
-        <a href="https://rs.school/" class="header-credits">Designed by ©</a>
+        <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" class="header-credits">Designed by ©</a>
     </header>
     <main class="main">
+        <div class="panda-gif-wrapper">
+            <div class="panda-gif"></div>
+            <div class="panda-text">Thanks for your donation!</div>
+        </div>
         <section class="panda-block"></section>
         <section class="donations">
             <div class="donation-wrapper">
@@ -62,57 +68,41 @@
                         </div>
                         <div class="form-line-amount">
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                 <p class="amount-text">5000</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">2000</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class=" dollar active-dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar active-dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text active-amount">1000</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">500</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">250</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">100</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">50</p>
                             </div>
                             <div class="form-line-amount-item">
-                                <object class="dollar" type="image/svg+xml" data="../../assets/icons/dollar.svg" width="10" height="20" >
-                                    Your browser does not support SVG
-                                 </object>
+                                <img class="dollar" src="../../assets/icons/dollar.svg">
                                  <p class="amount-text">25</p>
                             </div>
                         </div>
                     </div>
                     <form class="input-form">
-                        <input class="amount-input" type="number" min="1" max="9999" maxlength="4" placeholder="Another amount" required>
+                        <input class="amount-input" type="number" max="9999" maxlength="4" placeholder="Another amount" title="Значение должно быть меньше или равно 9999">
                     </form>
                     <form class="period-form">
                         <input class="period-option" type="radio" id="monthly" name="period" value="period">
@@ -122,9 +112,7 @@
                         <div class="period-option-dot active-option-dot"></div>
                         <label for="once">Once</label>
                     </form>
-                    <form action="../donate/index.html">
-                        <button class="feed-button">Feed a friend now</button>
-                    </form>
+                    <button class="feed-button">Feed a friend now</button>
                     <p class="share-text">Share with your friends on social networks</p>
                 </div>
             </div>
@@ -132,10 +120,12 @@
     </main>
     <footer class="footer">
         <div class="footer-wrapper">
-            <div class="logo">
-                <h1 class="logo-text">PetStory online</h1>
-                <img class="logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
-            </div>
+            <form action="../../pages/main/index.html">
+                <button class="logo">
+                    <h1 class="logo-text">PetStory online</h1>
+                    <img class="logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
+                </button>
+            </form>
             <div class="subscription">
                 <div class="subscription-wrapper">
                     <div class="subscription-title">Subscribe to our news</div>
@@ -155,42 +145,50 @@
             <div class="social-media">
                 <ul class="social-media-list">
                     <li class="social-media-item">
-                        <div class="social-media-icon">
-                            <img src="../../assets/icons/Fill 211.svg" alt="Facebook icon" width="16" height="16" />
-                        </div>
-                        <a class="social-media-link" href="https://www.facebook.com/RollingScopesSchool/" target="_blank">Facebook</a>
+                        <a class="social-media-link" href="https://www.facebook.com/RollingScopesSchool/" target="_blank">
+                            <div class="social-media-icon">
+                                <img src="../../assets/icons/Fill 211.svg" alt="Facebook icon" width="16" height="16" />
+                            </div>
+                            Facebook
+                        </a>
                     </li>
                     <li class="social-media-item">
-                        <div class="social-media-icon">
-                            <img src="../../assets/icons/Fill 172.svg" alt="Twitter icon" width="16" height="16" />
-                        </div>
-                        <a class="social-media-link" href="https://twitter.com/rollingscopes/" target="_blank">Twitter</a>
+                        <a class="social-media-link" href="https://twitter.com/rollingscopes/" target="_blank">
+                            <div class="social-media-icon">
+                                <img src="../../assets/icons/Fill 172.svg" alt="Twitter icon" width="16" height="16" />
+                            </div>
+                            Twitter
+                        </a>
                     </li>
                     <li class="social-media-item">
-                        <div class="social-media-icon">
-                            <img src="../../assets/icons/Fill 166.svg" alt="Instagram icon" width="16" height="16" />
-                        </div>
-                        <a class="social-media-link" href="https://www.instagram.com/rsschool_news/" target="_blank">Instagram</a>
+                        <a class="social-media-link" href="https://www.instagram.com/rsschool_news/" target="_blank">
+                            <div class="social-media-icon">
+                                <img src="../../assets/icons/Fill 166.svg" alt="Instagram icon" width="16" height="16" />
+                            </div>
+                            Instagram
+                        </a>
                     </li>
                     <li class="social-media-item">
-                        <div class="social-media-icon">
-                            <img src="../../assets/icons/Fill 213.svg" alt="Youtube icon" width="18" height="18" />
-                        </div>
-                        <a class="social-media-link" href="https://www.youtube.com/RollingScopesSchool/" target="_blank">YouTube</a>
+                        <a class="social-media-link" href="https://www.youtube.com/RollingScopesSchool/" target="_blank">
+                            <div class="social-media-icon">
+                                <img src="../../assets/icons/Fill 213.svg" alt="Youtube icon" width="18" height="18" />
+                            </div>
+                            YouTube
+                        </a>
                     </li>
                   </ul>
             </div>
             <div class="footer-navigation" id="contacts">
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#" class="nav-link active-link">About</a></li>
+                        <li><a href="../../pages/main/index.html" class="nav-link">About</a></li>
                         <li><a href="#map" class="nav-link">Map</a></li>
                         <li><a href="#zoos" class="nav-link">Zoos</a></li>
                         <li><a href="#contacts" class="nav-link">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="credits">
-                    <a href="https://rs.school/" class="credits-link">
+                    <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" class="credits-link">
                         <p class="credits-text">Designed by Alisa Samborskaya</p>
                         <p class="credits-text">©RSSchool & ©Yem Digital 2021</p>
                     </a>
