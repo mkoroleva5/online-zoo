@@ -68,6 +68,7 @@ body {
     width: 82px;
     height: 52px;
     margin-right: 22px;
+    text-decoration: none;
     background-color: transparent;
     border: solid white 1px;
     border-radius: 2px;
@@ -156,7 +157,6 @@ body {
 }
 
 .watch-title {
-    font-family: "RobotoBold"; 
     display: flex;
     flex-wrap: wrap;
     position: absolute;
@@ -164,7 +164,9 @@ body {
     left: calc(50% - 500.31px/2 + 330.15px);
     width: 500px;
     height: 400px;
+    margin: 0;
     color: white;
+    font-family: "RobotoBold";
     font-size: 106.496px;
     font-weight: 700;
     text-align: center;
@@ -244,7 +246,10 @@ body {
 }
 
 .backstage-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-size: 48px;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -564,8 +569,11 @@ body {
 }
 
 .donations-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-size: 48px;
     color: #FE9013;
+    margin-top: 0;
     margin-bottom: 32px;
     text-align: center;
     line-height: 120%;
@@ -673,7 +681,9 @@ body {
 
 .testimonials-title {
     font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-size: 36px;
+    margin-top: 0;
     margin-bottom: 38px;
 }
 
@@ -960,12 +970,10 @@ input[type=range]::-moz-range-track {
     border-radius: 5px;
     cursor: pointer;
 }
-/*
+
 .submit-button:hover {
-    color: #4B9200;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
-*/
 .submit-button:active {
     color: #4B9200;
     border: 1px solid #4B9200;
@@ -975,6 +983,7 @@ input[type=range]::-moz-range-track {
 #email:invalid ~ .submit-button:active {
     color: #D31414;
     border: 1px solid #D31414;
+    transform: scale(1);
 }
 
 .donation-button {

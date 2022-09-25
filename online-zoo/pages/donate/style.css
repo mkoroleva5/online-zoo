@@ -68,6 +68,7 @@ body {
     width: 82px;
     height: 52px;
     margin-right: 22px;
+    text-decoration: none;
     background-color: transparent;
     border: solid white 1px;
     border-radius: 2px;
@@ -362,7 +363,7 @@ body {
     left: 50%;
     transform: translate(-50%);
     width: 78%;
-    height: 3px;
+    height: 2px;
     background-color: #72828E;
 }
 
