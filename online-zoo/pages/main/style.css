@@ -403,6 +403,7 @@ body {
 }
 
 .card-transform {
+    border-radius: 5px;
     transform: scale(1.06);
     filter: brightness(50%);
 }
@@ -971,7 +972,7 @@ input[type=range]::-moz-range-track {
     transform: scale(1);
 }
 
-#email:invalid .submit-button {
+#email:invalid ~ .submit-button:active {
     color: #D31414;
     border: 1px solid #D31414;
 }
