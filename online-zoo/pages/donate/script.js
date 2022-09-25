@@ -1,23 +1,3 @@
-// Dots animation
-
-const dots = document.querySelectorAll('.line-dot-wrapper');
-const dollars = document.querySelectorAll('.dollar');
-const amountText = document.querySelectorAll('.amount-text');
-const amountItems = document.querySelectorAll('.form-line-amount-item');
-
-for (let i = 0; i < dots.length; i++) {
-    dots[i].addEventListener('mouseover', () => {
-        dots[i].classList.add('hover-dot');
-        dollars[i].classList.add('hover-dollar');
-        amountText[i].classList.add('hover-amount');
-    })
-    dots[i].addEventListener('mouseout', () => {
-        dots[i].classList.remove('hover-dot');
-        dollars[i].classList.remove('hover-dollar');
-        amountText[i].classList.remove('hover-amount');
-    })
-}
-
 // Period form animation
 
 const options = document.querySelectorAll('.period-option');
