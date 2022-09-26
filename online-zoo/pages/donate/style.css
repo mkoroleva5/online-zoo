@@ -807,6 +807,14 @@ input[type=number] {
     color:#4B9200;
 }
 
+.social-media-link:hover .social-media-icon {
+    transform: translateY(-1px);
+}
+
+.social-media-link:hover {
+    transform: scale(1.05);
+}
+
 .social-media-icon {
     display: flex;
     justify-content: center;
