@@ -127,12 +127,16 @@
                         <input class="amount-input" type="number" max="9999" placeholder="Another amount" title="Значение должно быть меньше или равно 9999">
                     </form>
                     <form class="period-form">
-                        <input class="period-option" type="radio" id="monthly" name="period" value="period">
-                        <div class="period-option-dot"></div>
-                        <label for="monthly">Monthly</label>                        
-                        <input class="period-option" type="radio" id="once" name="period" value="period" checked>
-                        <div class="period-option-dot active-option-dot"></div>
-                        <label for="once">Once</label>
+                        <div class="period-item">
+                            <input class="period-option" type="radio" id="monthly" name="period" value="period">
+                            <div class="period-option-dot"></div>
+                            <label for="monthly">Monthly</label>   
+                        </div>
+                        <div class="period-item">
+                            <input class="period-option" type="radio" id="once" name="period" value="period" checked>
+                            <div class="period-option-dot"></div>
+                            <label for="once">Once</label>
+                        </div>
                     </form>
                     <button class="feed-button">Feed a friend now</button>
                     <p class="share-text">Share with your friends on social networks</p>

@@ -1,5 +1,5 @@
 // Period form animation
-
+/*
 const options = document.querySelectorAll('.period-option');
 const optionDots = document.querySelectorAll('.period-option-dot');
 
@@ -21,15 +21,13 @@ for (let i = 0; i < options.length; i++) {
         optionDots[i].classList.add('active-option-dot');  
     })
 }
-
+*/
 // Panda gif 
 
 const feedButton = document.querySelector('.feed-button');
 const popUp = document.querySelector('.panda-gif-wrapper');
 const pandaGif = document.querySelector('.panda-gif');
 const amountInput = document.querySelector('.amount-input');
-
-
 
 feedButton.addEventListener('click', () => {
     let randomNum = Math.ceil(Math.random() * 3, 1);
