@@ -770,13 +770,19 @@ body {
     background-position: 100% 15%;
 }
 
-.testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Fredericka_Michelin.jfif');
     background-size: cover;
     background-position: 30%;
 }
 
 .testimonial-card:nth-of-type(4) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('../../assets/images/Mila_Riksha.jfif');
+    background-size: cover;
+}
+
+.testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Mila_Riksha.jfif');
     background-size: cover;
 }
@@ -1302,15 +1308,77 @@ input[type=range]::-moz-range-track {
     }
 
     .feedback-button {
-        margin-bottom: 95px;
+        margin-bottom: 130px;
     }
 
     .footer-wrapper {
-        margin: 38px 18px 30px 44px;
+        margin: 40px 18px 30px 44px;
         grid-template-columns: 1fr 2.8fr;
     }
 
     .subscription-wrapper {
         margin-right: 32px;
+    }
+
+    .donations {
+        margin-bottom: 100px;
+    }
+
+    .testimonials-title {
+        margin-bottom: 22px;
+    }
+
+    .testimonials-wrapper {
+        width: 100%;
+        padding: 10px 30px;
+    }
+
+    .testimonial-card {
+        width: 293px;
+    }
+
+    .testimonials-cards-wrapper {
+        grid-template-columns: repeat(6, 293px);
+        grid-template-areas: 
+        "one six five four two three"; 
+    }
+
+    .one { grid-area: one; }
+    .two { grid-area: two; }
+    .three { grid-area: three; }
+    .four { grid-area: four; }
+    .five { grid-area: five; }
+    .six { grid-area: six; }
+
+    .testimonial-card > .testimonial-inner-card > .testimonial-feedback {
+        margin-right: 10px;
+    }
+
+    .testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-feedback {
+        margin-right: 12px;
+    }
+    
+    .testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-feedback > p:first-of-type,
+    .testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-feedback > p:first-of-type {
+        text-indent: 0.25em;
+    }
+
+    .testimonial-card {
+        background: linear-gradient(#F5F7F6, #F5F7F6) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    }
+
+    .input-range {
+        width: 42%;
+    }
+
+    .testimonials-slider {
+        margin-bottom: 48px;
+    }
+
+    .flower-bottom {
+        width: 240px;
+        height: 235.5px;
+        bottom: -42px;
+        right: -86px;
     }
 }
