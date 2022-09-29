@@ -808,11 +808,11 @@ input[type=number] {
 }
 
 .social-media-link:hover .social-media-icon {
-    transform: translateY(-1px);
+    transform: scale(1.05);
 }
 
 .social-media-link:hover {
-    transform: scale(1.05);
+    font-size: 17px;
 }
 
 .social-media-icon {
