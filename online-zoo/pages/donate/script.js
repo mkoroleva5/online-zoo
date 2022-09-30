@@ -63,3 +63,22 @@ for (let i = 0; i < creditsLinkText.length; i++) {
     })
 }
 
+// Amount item checked
+
+const amountItems = document.querySelectorAll('.amount-radio');
+
+function changeChecked () {
+    for (let i = 0; i < amountItems.length; i++) {
+        if (window.innerWidth < 641) {
+            amountItems[i].checked = false;
+            amountItems[5].checked = true;
+        } else {
+            amountItems[i].checked = false;
+            amountItems[2].checked = true;
+        }
+    }
+}
+
+window.addEventListener('resize', changeChecked);
+
+    

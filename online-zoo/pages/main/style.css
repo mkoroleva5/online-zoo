@@ -292,6 +292,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -10;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .pets {
@@ -1134,6 +1135,40 @@ input[type=range]::-moz-range-track {
 }
 
 @media (max-width: 1325px) {
+    .watch-block {
+        height: 584px;
+        background-size: 120%;
+    }
+
+    .watch-wrapper {
+        margin: 0;
+        position: absolute;
+        top: 122.8px;
+        right: 36px;
+    }
+
+    .orange-circle {
+        width: 367px;
+        height: 367px;
+        top: -54px;
+        left: -8px;
+    }
+
+    .watch-title {
+        font-size: 85px;
+        width: 400px;
+        height: 320px;
+        margin-bottom: 40px;
+    }
+
+    .watch-title span {
+        transform: translateX(8px);
+    }
+
+    .watch-button {
+        margin-bottom: 40px;
+    }
+
     .pets-cards-wrapper {
         width: 100%;
         display: flex;
@@ -1201,40 +1236,7 @@ input[type=range]::-moz-range-track {
         gap: 48px;
     }
 
-    .watch-block {
-        height: 584px;
-        background-size: 120%;
-    }
-
-    .watch-wrapper {
-        margin: 0;
-        position: absolute;
-        top: 122.8px;
-        right: 36px;
-    }
-
-    .orange-circle {
-        width: 367px;
-        height: 367px;
-        top: -54px;
-        left: -8px;
-    }
-
-    .watch-title {
-        font-size: 85px;
-        width: 400px;
-        height: 320px;
-        margin-bottom: 40px;
-    }
-
-    .watch-title span {
-        transform: translateX(8px);
-    }
-
-    .watch-button {
-        margin-bottom: 40px;
-    }
-
+    
     .backstage-text {
         padding-left: 32px;
         width: 51.7%;
@@ -1484,6 +1486,19 @@ input[type=range]::-moz-range-track {
         padding: 0;
     }
 
+    .backstage-wrapper {
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .backstage-image {
+        display: none;
+    }
+
+    .backstage-text {
+        width: 100%;
+    }
+
     .donations-wrapper {
         margin: 30px 0 50px 0;
     }
@@ -1620,9 +1635,10 @@ input[type=range]::-moz-range-track {
 
     .backstage-wrapper {
         justify-content: flex-start;
+        height: auto;
         padding: 0 23px;
         margin-top: 70px;
-        margin-bottom: 19px;
+        margin-bottom: 61px;
     }
 
     .backstage-text {
@@ -1695,11 +1711,11 @@ input[type=range]::-moz-range-track {
     }
 
     .pet-title {
-        font-size: 12px;
+        font-size: 12.5px;
     }
 
     .pet-destination {
-        font-size: 11.5px;
+        font-size: 11.6px;
     }
 
     .alligator-first-text {
@@ -1873,5 +1889,317 @@ input[type=range]::-moz-range-track {
 
     .social-media-link:hover .social-media-icon {
         transform: scale(1.1);
+    }
+}
+
+@media (max-width: 615px) {
+    .pets-cards-row {
+        width: auto;
+        margin: 0 auto;
+        grid-template-columns: 285px;
+        gap: 20px 30px;
+        grid-template-areas:
+        "."
+        "."
+        "."
+        ".";
+    }
+    
+    .second-row,
+    .slider-buttons {
+        display: none;
+    }
+
+    .paying-block {
+        flex-direction: column;
+    }
+
+    .paying-card:nth-of-type(1)::before,
+    .paying-card:nth-of-type(3)::before {
+        top: unset;
+        bottom: -40px;
+        right: -43px;
+        transform: rotate(85deg);
+    }
+
+    .footer-wrapper {
+        margin: 5px 10px;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 15px 0px; 
+        grid-template-areas: 
+        "logo"
+        "social-media"
+        "donation-block"
+        "footer-navigation"; 
+    }
+
+    .logo { grid-area: logo; }
+    .social-media { grid-area: social-media; }
+    .donation-block { grid-area: donation-block; }
+    .footer-navigation { grid-area: footer-navigation; }
+
+    .footer {
+        height: 334px;
+    }
+
+    .footer-wrapper .logo {
+        width: 130px;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .footer-wrapper .logo .logo-bamboo {
+        bottom: 19.2px;
+        left: 71.5px;
+    }
+    
+    .social-media {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .social-media-list {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .donation-block {
+        margin: 0;
+        transform: translateY(-3px);
+    }
+
+    .footer-navigation {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .footer-nav {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .footer-navigation .nav .nav-list {
+        gap: 30px;
+    }
+    
+    .credits {
+        order: 1;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 538px) {
+    .watch-block {
+        height: 220px;
+        background-position: 50% 0%;
+    }
+
+    .watch-wrapper {
+        top: 75px;
+        align-items: center;
+    }
+
+    .watch-title {
+        height: 102.44px;
+        width: 128.13px;
+        font-size: 28px;
+        line-height: 21px;
+        right: 10px;
+    }
+    
+    .watch-title span {
+        transform: translateX(0);
+    }
+
+    .orange-circle {
+        width: 119px;
+        height: 119px;
+        top: -19px;
+        right: 39px;
+    }
+
+    .watch-button {
+        top: 166px;
+        left: unset;
+        margin-bottom: 0;
+    }
+
+    .backstage {
+        margin-top: 114px;
+    }
+
+    .backstage-wrapper {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .backstage {
+        overflow: visible;
+    }
+
+    .backstage-title {
+        font-size: 24px;
+        margin-bottom: 9px;
+    }
+
+    .backstage-wrapper {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .backstage-text {
+        width: 100%;
+    }
+
+    .backstage-title {
+        transform: translateX(0);
+    }
+    
+    .backstage-title-description {
+        margin-left: 2px;
+        margin-bottom: 18.5px;
+    }
+
+    .backstage-subtitle {
+        margin-bottom: 10px;
+    }
+
+    .backstage-description {
+        line-height: 22px;
+    }
+
+    .flower-top {
+        background-size: 36%;
+        top: -75px;
+        right: -262px;
+    }
+}
+
+@media (max-width: 321px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .pets-cards-row {
+        margin: 0;
+    }
+
+    .pet-text {
+        padding: 8px 10px 10px 12px;
+    }
+
+    .pets-cards-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .choose-button {
+        margin-bottom: 60px;
+    }
+
+    .flower-left {
+        left: -79px;
+        bottom: -388px;
+        background-size: 15.5%;
+    }
+
+    .flower-right {
+        right: -20px;
+        bottom: -209px;
+        background-size: 25%;
+    }
+
+    .donations-wrapper {
+        margin: 20px 10px;
+    }
+
+    .donations-title {
+        font-size: 24px;
+        margin-top: 21px;
+        margin-bottom: 10px;
+    }
+
+    .donations-text-1 {
+        font-size: 18px;
+        padding: 0 2px 0 0 ;
+        text-align: center;
+    }
+
+    .donations-text-2, 
+    .donations-text-3 {
+        display: none;
+    }
+
+    .how-it-works-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .paying-card-image {
+        margin-bottom: 10px;
+    }
+
+    .paying-block {
+        padding-left: 8px;
+        margin-bottom: 23px;
+        gap: 31px;
+    }
+
+    .paying-card-text{
+        line-height: 137%;
+    }    
+
+    .paying-card:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+
+    .paying-card:nth-of-type(3)::before {
+        bottom: -25px;
+    }
+
+    .feed-button {
+        margin-bottom: 40px;
+    }
+
+    .donations {
+        margin-bottom: 30px;
+    }
+
+    .testimonials-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .testimonials-wrapper {
+        padding: 10px;
+    }
+
+    .testimonial-card {
+        padding: 8px 11px 17px 10px;
+    }
+
+    .testimonial-avatar {
+        margin-right: 7px;
+    }
+
+    .testimonial-feedback {
+        margin-left: 7px;
+    }
+
+    .testimonials-cards-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .feedback-button {
+        margin-bottom: 50px;
+    }
+
+    .flower-bottom {
+        transform: matrix(-0.97, -0.26, -0.26, 0.97, 0, 0);
+        background-size: 32%;
+        bottom: -158px;
+        right: -17px;
     }
 }
