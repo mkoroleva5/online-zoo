@@ -1550,6 +1550,7 @@ input[type=range]::-moz-range-track {
         position: relative;
         width: 18.5px;
         height: 10px;
+        cursor: pointer;
         z-index: 1;
     }
 
@@ -1734,7 +1735,7 @@ input[type=range]::-moz-range-track {
     }
 
     .text-hover {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .slider-buttons {
