@@ -663,13 +663,14 @@ body {
 .paying-block {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
 .paying-card {
     display: flex;
     flex-direction: column;
-    width: 21%;
+    width: 20%;
 }
 
 .paying-card-image {
@@ -1304,7 +1305,7 @@ input[type=range]::-moz-range-track {
     }
 
     .flower-right {
-        bottom: -95px;
+        bottom: -96px;
         background-size: 65%;
     }
 
@@ -1351,12 +1352,16 @@ input[type=range]::-moz-range-track {
     }
 
     .footer-wrapper {
-        margin: 40px 18px 30px 44px;
-        grid-template-columns: 1fr 2.8fr;
+        margin: 40px 30px 30px 30px;
+        grid-template-columns: 1fr 2.75fr;
     }
 
     .subscription-wrapper {
         margin-right: 32px;
+    }
+
+    .subscription-title {
+        margin-bottom: 14px;
     }
 
     .donations {
@@ -1604,7 +1609,7 @@ input[type=range]::-moz-range-track {
 
     .watch-title {
         position: absolute;
-        right: 15px;
+        right: 16px;
         width: 255px;
         height: 205px;
         font-size: 54.42px;
@@ -1619,14 +1624,14 @@ input[type=range]::-moz-range-track {
         width: 237.6px;
         height: 237.6px;
         top: -37px;
-        right: 70px;
+        right: 71px;
         left: auto;
     }
 
     .watch-button {
         position: absolute;
-        top: 198px;
-        left: 22px;
+        top: 197px;
+        left: 20px;
     }
 
     .backstage-image {
@@ -1636,7 +1641,7 @@ input[type=range]::-moz-range-track {
     .backstage-wrapper {
         justify-content: flex-start;
         height: auto;
-        padding: 0 23px;
+        padding: 0 20px;
         margin-top: 70px;
         margin-bottom: 61px;
     }
@@ -1663,9 +1668,9 @@ input[type=range]::-moz-range-track {
     .flower-top {
         display: block;
         height: 473px;
-        background-size: 80%;
-        top: -8px;
-        right: -167px;
+        background-size: 79%;
+        top: -6px;
+        right: -165px;
     }
 
     .first-row {
@@ -1694,6 +1699,7 @@ input[type=range]::-moz-range-track {
 
     .pets-cards-block {
         max-width: 616px;
+        padding: 10px 8px;
     }
 
     .pet-card {
@@ -1756,6 +1762,7 @@ input[type=range]::-moz-range-track {
 
     .slider-buttons {
         gap: 30px;
+        padding-bottom: 10px;
     }
 
     .choose-button {
@@ -1763,13 +1770,13 @@ input[type=range]::-moz-range-track {
     }
 
     .flower-left {
-        left: -251px;
-        bottom: -260px;
+        left: -253px;
+        bottom: -259px;
     }
 
     .flower-right {
-        bottom: -148px;
-        background-size: 46%;
+        bottom: -144px;
+        background-size: 48%;
     }
 
     .donations {
@@ -1782,14 +1789,14 @@ input[type=range]::-moz-range-track {
 
     .donations-title {
         font-size: 42px;
-        margin-top: 10px;
+        margin-top: 9px;
         margin-bottom: 21px;
     }
 
     .donations-text-1,
     .donations-text-2,
     .donations-text-3 {
-        padding-left: 21px;
+        padding-left: 20px;
     }
 
     .donations-text-2,
@@ -1799,6 +1806,7 @@ input[type=range]::-moz-range-track {
 
     .donations-text-1 {
         font-size: 22px;
+        margin-bottom: 19px;
     }
 
     .donations-text-3 {
@@ -1806,7 +1814,7 @@ input[type=range]::-moz-range-track {
     }
     
     .how-it-works {
-        transform: translateX(-4px);
+        transform: translateX(-6px);
     }
 
     .how-it-works-title {
@@ -1819,7 +1827,7 @@ input[type=range]::-moz-range-track {
     }
 
     .feed-button {
-        margin-bottom: 59px;
+        margin-bottom: 60px;
     }
 
     .testimonials-cards-wrapper {
@@ -1829,6 +1837,18 @@ input[type=range]::-moz-range-track {
     .feedback-button {
         width: 240px;
         margin-bottom: 70px;
+    }
+
+    .testimonial-card {
+        padding: 12px 11px 17px 10px;
+    }
+
+    .testimonial-avatar {
+        margin-right: 10px;
+    }
+
+    .testimonial-feedback {
+        margin-left: 6px;
     }
 
     .flower-bottom {
@@ -1842,7 +1862,7 @@ input[type=range]::-moz-range-track {
     }
 
     .footer-wrapper {
-        margin: 2px 18px 20px 21px;
+        margin: 2px 20px 20px 21px;
         display: grid; 
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 75px 100px 82px; 
@@ -1880,11 +1900,11 @@ input[type=range]::-moz-range-track {
     }
 
     .donation-block {
-        margin-top: 7px;
+        margin-top: 5px;
     }
 
     .footer-navigation .nav .nav-list {
-        gap: 38px;
+        gap: 37px;
     }
 
     .social-media-link:hover .social-media-icon {
@@ -2072,19 +2092,17 @@ input[type=range]::-moz-range-track {
     }
 
     .flower-top {
-        background-size: 36%;
+        width: 31px;
+        background-image: url('../../assets/images/flower_foto3.png');
+        background-size: 100%;
         top: -75px;
-        right: -262px;
+        right: 0;
     }
 }
 
 @media (max-width: 321px) {
     .header {
         padding: 0 10px;
-    }
-
-    .pets-cards-row {
-        margin: 0;
     }
 
     .pet-text {
