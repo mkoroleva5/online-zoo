@@ -45,6 +45,16 @@ body {
     font-size: 16px;
 }
 
+.dark {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    transition: 0.5s;
+    display: none;
+}
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -55,6 +65,53 @@ body {
     color: white;
     background-color: black;
     z-index: 100;   
+}
+
+.burger-menu {
+    width: 100%;
+    height: 329px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+.burger-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.burger-nav-link,
+.burger-credits {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.2px;
+    transition: 0.2s;
+}
+
+.burger-nav-link:hover,
+.burger-credits:hover {
+    color:#FE9013;
+}
+
+.burger-nav-link:active,
+.burger-credits:active {
+    color:#4B9200;
 }
 
 .nav-wrapper {
@@ -88,6 +145,27 @@ body {
     position: absolute;
     bottom: 6.2px;
     left: 8.5px;
+}
+
+.burger-logo,
+.burger-logo-text {
+    color:#FE9013;
+    font-size: 15.21px;
+}
+
+.burger-logo {
+    border: solid #FE9013 1px;
+    height: 41.6px;
+    width: 65.6px;
+    margin-bottom: 30px;
+}
+
+.burger-logo-bamboo {
+    width: 8.62px;
+    height: 17.79px;
+    bottom: 4.7px;
+    left: 7.5px;
+    filter: invert(55%) sepia(30%) saturate(1366%) hue-rotate(348deg) brightness(145%) contrast(117%);
 }
 
 .nav-list {
@@ -287,7 +365,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: black;
-    padding-left: 5px;
+    padding-left: 20px;
     margin-bottom: 17px;
 }
 
@@ -799,6 +877,10 @@ input[type=number] {
     transition: 0.2s;
 }
 
+.social-media-link p {
+    margin: 0;
+}
+
 .social-media-link:active .social-media-icon{
     background-color:#4B9200;
 }
@@ -808,11 +890,11 @@ input[type=number] {
 }
 
 .social-media-link:hover .social-media-icon {
-    transform: translateY(-1px);
+    transform: scale(1.05);
 }
 
 .social-media-link:hover {
-    transform: scale(1.05);
+    font-size: 17px;
 }
 
 .social-media-icon {
@@ -887,4 +969,648 @@ input[type=number] {
     font-weight: 400;
     font-size: 36px;
     color: white;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media (max-width: 1325px) {
+    .panda-block {
+        background-size: 160%;
+        background-position: 29% 50%;
+    }
+
+    .footer-wrapper {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .donation-wrapper {
+        margin: 0 30px;
+    }
+
+    .form-line-label {
+        width: 55px;
+    }
+}
+
+@media (max-width: 1001px) {
+    .header {
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    .nav-list {
+        gap: 48px;
+    }
+
+    .panda-block {
+        height: 390px;
+    }
+    
+    .donation-title {
+        line-height: 46.8px;
+        margin: 40px 100px 30px 0;
+    }
+
+    .donation-subtitle {
+        margin-bottom: 42px;
+    }
+
+    .donation-info-block {
+        padding: 20px 47px 18px 47px;
+        margin-bottom: 30px;
+    }
+
+    .info-title {
+        margin-bottom: 10px;
+    }
+
+    .diet-amount {
+        margin-right: 5px;
+    }
+
+    .diet-animal {
+        margin-right: 5px;
+    }
+
+    .form-name {
+        padding-left: 18px;
+    }
+
+    .amount-item:first-of-type {
+        display: none;
+    }
+
+    .progress-bar-wrapper {
+        width: 95.7%;
+        margin: auto;
+        margin-bottom: 99px;
+    }
+    
+    .form-inner-line {
+        width: 96%;
+    }
+
+    .progress-bar {
+        position: absolute;
+        width: 105%;
+        left: -20px;
+    }
+
+    .form-line-label {
+        padding-left: 17px;
+        width: 69px;
+    }
+
+    .amount-input {
+        margin-bottom: 26px;
+    }
+
+
+    .period-form {
+        margin-right: 69px;   
+        margin-bottom: 31px;
+    }
+
+    .footer-wrapper {
+        margin: 40px 32px 30px 30px;
+        grid-template-columns: 1fr 2.75fr;
+    }
+
+    .subscription-wrapper {
+        margin-right: 32px;
+    }
+
+    .subscription-title {
+        margin-bottom: 14px;
+    }
+
+    .footer-navigation .nav .nav-list {
+        padding-left: 54px;
+    }
+}
+
+@media (max-width: 900px) {
+    .form-line-label {
+        width: 45px;
+    }
+
+    .progress-bar {
+        left: -11px;
+        width: 103%;
+    }
+}
+
+@media (max-width: 800px) {
+    .diet-block {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .form-line-label {
+        width: 60px;
+    }
+
+    .progress-bar {
+        left: -15px;
+        width: 106%;
+    }
+}
+
+@media (max-width: 680px) {
+    .progress-bar {
+        left: -17px;
+        width: 107%;
+    }
+}
+
+@media (max-width: 641px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .header {
+        position: fixed;
+        justify-content: space-between;
+        height: 34px;
+        padding: 0 20px;
+    }
+
+    .header .nav-wrapper .nav {
+        display: none;
+    }
+
+    .header-logo {
+        border: none;
+        width: 46.86px;
+    }
+
+    .header-logo-text {
+        font-size: 12.3px;
+    }
+
+    .header-logo-bamboo {
+        height: 20px;
+        width: 6.5px;
+        bottom: 11.2px;
+        left: 3px;
+    }
+
+    .header-credits {
+        display: none;
+    }
+
+    .burger-menu-button {
+        display: block;
+        position: relative;
+        width: 18.5px;
+        height: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .burger-menu-button span, 
+    .burger-menu-button span::before, 
+    .burger-menu-button span::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .burger-menu-button span::before {
+        top: 4px;
+    }
+
+    .burger-menu-button span::after {
+        top: 8px;
+    }
+
+    .panda-block {
+        height: 369px;
+        margin: 0;
+        background-size: 215%;
+        background-position: 37% 47%;
+    }
+
+    .donation-wrapper {
+        margin: 0 17px 0 20px;
+    }
+
+    .donation-title {
+        font-size: 24px;
+        line-height: 28.8px;
+        margin: 32px 30px 17px 0;
+    }
+
+    .donation-description {
+        margin-bottom: 30px;
+    }
+
+    .donation-subtitle {
+        margin-bottom: 33px;
+    }
+
+    .donation-info-block {
+        margin-right: 3px;
+        margin-bottom: 46px;
+        padding: 28px 0 1px 0;
+    }
+
+    .info-title {
+        margin: 0 0 21px 0;
+    }
+
+    .info-description {
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    .diet-block {
+        padding-right: 15px;
+        margin-bottom: 18px;
+    }
+
+    .diet-animal {
+        margin-top: 8px;
+    }
+
+    .form-name {
+        margin-bottom: 8px;
+        padding-left: 10px;
+    }
+
+    .progress-bar-wrapper {
+        width: 100%;
+    }
+
+    .form-inner-line {
+        width: 87%;
+    }
+
+    .progress-bar {
+        width: 98%;
+        left: 5px;
+    }
+
+    .amount-item:nth-of-type(2),
+    .amount-item:nth-of-type(3) {
+        display: none;
+    }
+    
+    .form-line-label {
+        padding-left: 9px;
+        width: 69px;
+    }
+
+    .amount-input {
+        width: 180px;
+        height: 42px;
+        padding-left: 5px;
+        margin-bottom: 32px;
+        background-position: 95% center;
+    }
+
+    .period-form {
+        margin-right: 70px;
+    }
+
+    .share-text {
+        margin-bottom: 32px;
+    }
+
+    .footer {
+        height: 282px;
+    }
+
+    .footer-wrapper {
+        margin: 2px 20px 20px 21px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 75px 100px 82px; 
+        gap: 15px 0px;
+        grid-template-areas: 
+        "logo social-media"
+        "donation-block social-media"
+        "footer-navigation footer-navigation"; 
+    }
+    
+    .social-media { grid-area: social-media; }
+    .logo { grid-area: logo; }
+    .footer-navigation { grid-area: footer-navigation; }
+    .donation-block { grid-area: donation-block; }          
+    
+    .footer-wrapper .logo {
+        margin: 11px 5px 0 0;
+    }
+
+    .subscription,
+    .social-media-link p {
+        display: none;
+    }
+
+    .social-media {
+        justify-content: flex-end;
+    }
+
+    .social-media-list li {
+        margin-bottom: 15px;
+    }
+
+    .social-media-icon {
+        margin-right: 0;
+    }
+
+    .donation-block {
+        margin-top: 5px;
+    }
+
+    .footer-navigation .nav .nav-list {
+        gap: 36px;
+        padding-left: 0;
+    }
+
+    .social-media-link:hover .social-media-icon {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 615px) {
+    .diet-animal {
+        background-size: 100%;
+    }
+
+    .footer-wrapper {
+        margin: 5px 10px;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 15px 0px; 
+        grid-template-areas: 
+        "logo"
+        "social-media"
+        "donation-block"
+        "footer-navigation"; 
+    }
+
+    .logo { grid-area: logo; }
+    .social-media { grid-area: social-media; }
+    .donation-block { grid-area: donation-block; }
+    .footer-navigation { grid-area: footer-navigation; }
+
+    .footer {
+        height: 334px;
+    }
+
+    .footer-wrapper .logo {
+        width: 130px;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .footer-wrapper .logo .logo-bamboo {
+        bottom: 19.2px;
+        left: 71.5px;
+    }
+    
+    .social-media {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .social-media-list {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .donation-block {
+        margin: 0;
+        transform: translateY(-3px);
+    }
+
+    .footer-navigation {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .footer-nav {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .footer-navigation .nav .nav-list {
+        gap: 30px;
+    }
+    
+    .credits {
+        order: 1;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 580px) {
+    .progress-bar {
+        width: 100%;
+        left: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    .panda-block {
+        height: 221px;
+        background-size: 240%;
+        background-position: 33.5% 44%;
+    }
+
+    .donation-wrapper {
+        margin: 0 0 21px 0;
+    }
+
+    .donation-title {
+        margin: 32px 20px 17px 10px;
+    }
+
+    .donation-description {
+        width: 93%;
+        line-height: 22.2px;
+        margin: 0 0 29px 10px;
+    }
+
+    .donation-subtitle {
+        font-size: 24px;
+        margin-left: 10px;
+        margin-bottom: 29px;
+    }
+
+    .donation-info-block {
+        margin: 0 10px;
+        padding: 20px 0 1px 0;
+    }
+
+    .info-title {
+        font-size: 24px;
+        margin-bottom: 9px;
+    }
+
+    .info-description {
+        font-size: 16px;
+        line-height: 22.4px;
+        margin-bottom: 25px;
+    }
+
+    .diet-block {
+        margin-bottom: 0;
+    }
+
+    .diet-amount {
+        margin-right: 0;
+    }
+
+    .diet-amount-number {
+        font-size: 40.6px;
+    }
+
+    .diet-amount-description {
+        font-size: 9.02px;
+    }
+
+    .diet-separator {
+        margin-right: 13px;
+        width: 12px;
+        height: 12px;
+        right: 5px;
+        top: 2px;
+    }
+
+    .diet-separator:after,
+    .diet-separator:before {
+        height: 10px;
+        width: 1px;
+    }
+
+    .diet-animal {
+        position: relative;
+        left: 5px;
+        width: 150px;
+        height: 120px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .form-name {
+        padding-left: 0;
+        margin-bottom: 11px;
+    }
+
+    .progress-bar-wrapper {
+        height: 13.5px;
+        margin-bottom: 49px;
+    }
+
+    .form-inner-line {
+        height: 1px;
+        top: 6px;
+    }
+
+    .progress-bar {
+        width: 94%;
+        top: 0;
+        left: 8px;
+    }
+
+    .amount-item {
+        gap: 7px;
+    }
+
+    .line-dot {
+        width: 5px;
+        height: 5px;
+    }
+
+    .amount-radio:checked ~ .line-dot::before {
+        width: 8.5px;
+        height: 8.5px;
+        border: solid 1.5px #FE9013;
+    }
+
+    .amount-radio:checked ~ .line-dot::after {
+        width: 17px;
+        height: 17px;
+        border: solid 1.5px #FE9013;
+    }
+    
+    .form-line-label {
+        width: 21px;
+        padding-left: 0;
+    }
+
+    .amount-text {
+        font-size: 13px;
+        margin-left: 6px;
+    }
+
+    .dollar {
+        width: 5px;
+        height: 10px;
+        margin: 0 8px 0 0;
+        background-size: 100%;
+        top: unset;
+    }
+
+    .amount-radio:checked ~ .form-line-label .dollar {
+        background-size: 100%;
+    }
+
+    .amount-radio {
+        transform: scale(3);
+        margin: 0;
+    }
+
+    .amount-input {
+        margin-bottom: 25px;
+    }
+
+    .period-form {
+        margin-right: 72px;
+        margin-bottom: 30px;
+    }
+
+    .share-text {
+        font-size: 15.95px;
+        margin-bottom: 21px;
+    }
+
+    .donation-block {
+        transform: translateY(-5px);
+    }
+
+    .credits {
+        position: relative;
+        top: -3px;
+    }
+}
+
+@media (max-width: 330px) {
+    .feed-button:hover,
+    .donation-button:hover {
+        transform: scale(1.01);
+    }
+}
+
+@media (max-width: 321px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .burger-logo {
+        margin-bottom: 13px;
+    }
 }
