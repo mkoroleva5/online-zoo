@@ -64,7 +64,7 @@ for (let i = 0; i < creditsLinkText.length; i++) {
 }
 
 // Amount item checked
-
+/*
 const amountItems = document.querySelectorAll('.amount-radio');
 
 function changeChecked () {
@@ -80,6 +80,56 @@ function changeChecked () {
 }
 
 window.addEventListener('resize', changeChecked);
+*/
+
+// Amount input
+
+const amountItems = document.querySelectorAll('.amount-radio');
+const amountSums = document.querySelectorAll('.amount-text');
+
+for (let i = 0; i < amountSums.length; i++) {
+    amountItems[i].addEventListener('click', () => {
+        amountInput.value = amountSums[i].innerHTML;
+    });
+
+    amountInput.addEventListener('change', () => {
+        if (amountInput.value == 5000) {
+            amountItems[i].checked = false;
+            amountItems[0].checked = true;
+        }
+        if (amountInput.value == 2000) {
+            amountItems[i].checked = false;
+            amountItems[1].checked = true;
+        }
+        if (amountInput.value == 1000) {
+            amountItems[i].checked = false;
+            amountItems[2].checked = true;
+        }
+        if (amountInput.value == 500) {
+            amountItems[i].checked = false;
+            amountItems[3].checked = true;
+        }
+        if (amountInput.value == 250) {
+            amountItems[i].checked = false;
+            amountItems[4].checked = true;
+        }
+        if (amountInput.value == 100) {
+            amountItems[i].checked = false;
+            amountItems[5].checked = true;
+        }
+        if (amountInput.value == 50) {
+            amountItems[i].checked = false;
+            amountItems[6].checked = true;
+        }
+        if (amountInput.value == 25) {
+            amountItems[i].checked = false;
+            amountItems[7].checked = true;
+        }
+        if (amountInput.value == 0) {
+            amountItems[i].checked = false;
+        }
+    });
+}
 
 // Burger menu
 
@@ -88,6 +138,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const dark = document.querySelector('.dark');
 const burgerNavLinks = document.querySelectorAll('.burger-nav-link');
 const burgerCredits = document.querySelector('.burger-credits');
+const closeButton = document.querySelector('.close-button');
 
 const openBurgerMenu = () => {
     burgerMenu.style.transform = 'translateX(0)';
@@ -100,6 +151,7 @@ const closeBurgerMenu = () => {
 }
 
 menuButton.addEventListener('click', openBurgerMenu);
+closeButton.addEventListener('click', closeBurgerMenu);
 burgerCredits.addEventListener('click', closeBurgerMenu);
 for (let i = 0; i < burgerNavLinks.length; i++) {
     burgerNavLinks[i].addEventListener('click', closeBurgerMenu);

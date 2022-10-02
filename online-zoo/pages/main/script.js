@@ -43,6 +43,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const dark = document.querySelector('.dark');
 const burgerNavLinks = document.querySelectorAll('.burger-nav-link');
 const burgerCredits = document.querySelector('.burger-credits');
+const closeButton = document.querySelector('.close-button');
 
 const openBurgerMenu = () => {
     burgerMenu.style.transform = 'translateX(0)';
@@ -55,6 +56,7 @@ const closeBurgerMenu = () => {
 }
 
 menuButton.addEventListener('click', openBurgerMenu);
+closeButton.addEventListener('click', closeBurgerMenu);
 burgerCredits.addEventListener('click', closeBurgerMenu);
 for (let i = 0; i < burgerNavLinks.length; i++) {
     burgerNavLinks[i].addEventListener('click', closeBurgerMenu);
