@@ -1092,6 +1092,14 @@ input[type=number] {
     .footer-navigation .nav .nav-list {
         padding-left: 54px;
     }
+
+    .panda-gif {
+        width: 90%;
+    }
+
+    .panda-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1126,6 +1134,15 @@ input[type=number] {
     .progress-bar {
         left: -17px;
         width: 107%;
+    }
+
+    .panda-gif {
+        width: 95%;
+        height: 250px;
+    }
+
+    .panda-text {
+        font-size: 24px;
     }
 }
 
