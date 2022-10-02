@@ -45,6 +45,16 @@ body {
     font-size: 16px;
 }
 
+.dark {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    transition: 0.5s;
+    display: none;
+}
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -55,6 +65,53 @@ body {
     color: white;
     background-color: black;
     z-index: 100;   
+}
+
+.burger-menu {
+    width: 100%;
+    height: 329px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+.burger-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.burger-nav-link,
+.burger-credits {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.2px;
+    transition: 0.2s;
+}
+
+.burger-nav-link:hover,
+.burger-credits:hover {
+    color:#FE9013;
+}
+
+.burger-nav-link:active,
+.burger-credits:active {
+    color:#4B9200;
 }
 
 .nav-wrapper {
@@ -88,6 +145,27 @@ body {
     position: absolute;
     bottom: 6.2px;
     left: 8.5px;
+}
+
+.burger-logo,
+.burger-logo-text {
+    color:#FE9013;
+    font-size: 15.21px;
+}
+
+.burger-logo {
+    border: solid #FE9013 1px;
+    height: 41.6px;
+    width: 65.6px;
+    margin-bottom: 30px;
+}
+
+.burger-logo-bamboo {
+    width: 8.62px;
+    height: 17.79px;
+    bottom: 4.7px;
+    left: 7.5px;
+    filter: invert(55%) sepia(30%) saturate(1366%) hue-rotate(348deg) brightness(145%) contrast(117%);
 }
 
 .nav-list {
@@ -893,6 +971,10 @@ input[type=number] {
     color: white;
 }
 
+.burger-menu {
+    display: none;
+}
+
 @media (max-width: 1325px) {
     .panda-block {
         background-size: 160%;
@@ -908,6 +990,10 @@ input[type=number] {
 @media (max-width: 1200px) {
     .donation-wrapper {
         margin: 0 30px;
+    }
+
+    .form-line-label {
+        width: 55px;
     }
 }
 
@@ -977,6 +1063,7 @@ input[type=number] {
 
     .form-line-label {
         padding-left: 17px;
+        width: 69px;
     }
 
     .amount-input {
@@ -1007,13 +1094,46 @@ input[type=number] {
     }
 }
 
+@media (max-width: 900px) {
+    .form-line-label {
+        width: 45px;
+    }
+
+    .progress-bar {
+        left: -11px;
+        width: 103%;
+    }
+}
+
 @media (max-width: 800px) {
     .diet-block {
         padding-right: 0;
     }
 }
 
+@media (max-width: 750px) {
+    .form-line-label {
+        width: 60px;
+    }
+
+    .progress-bar {
+        left: -15px;
+        width: 106%;
+    }
+}
+
+@media (max-width: 680px) {
+    .progress-bar {
+        left: -17px;
+        width: 107%;
+    }
+}
+
 @media (max-width: 641px) {
+    .burger-menu {
+        display: flex;
+    }
+
     .header {
         position: fixed;
         justify-content: space-between;
@@ -1148,6 +1268,7 @@ input[type=number] {
     
     .form-line-label {
         padding-left: 9px;
+        width: 69px;
     }
 
     .amount-input {
@@ -1292,6 +1413,13 @@ input[type=number] {
     .credits {
         order: 1;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 580px) {
+    .progress-bar {
+        width: 100%;
+        left: 0px;
     }
 }
 
@@ -1470,8 +1598,19 @@ input[type=number] {
     }
 }
 
+@media (max-width: 330px) {
+    .feed-button:hover,
+    .donation-button:hover {
+        transform: scale(1.01);
+    }
+}
+
 @media (max-width: 321px) {
     .header {
         padding: 0 10px;
+    }
+
+    .burger-logo {
+        margin-bottom: 13px;
     }
 }

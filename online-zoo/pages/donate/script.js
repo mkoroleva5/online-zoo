@@ -81,4 +81,32 @@ function changeChecked () {
 
 window.addEventListener('resize', changeChecked);
 
-    
+// Burger menu
+
+const menuButton = document.querySelector('.burger-menu-button');
+const burgerMenu = document.querySelector('.burger-menu');
+const dark = document.querySelector('.dark');
+const burgerNavLinks = document.querySelectorAll('.burger-nav-link');
+const burgerCredits = document.querySelector('.burger-credits');
+
+const openBurgerMenu = () => {
+    burgerMenu.style.transform = 'translateX(0)';
+    dark.style.display = 'block';
+}
+
+const closeBurgerMenu = () => {
+    burgerMenu.style.transform = 'translateX(100%)';
+    dark.style.display = 'none';
+}
+
+menuButton.addEventListener('click', openBurgerMenu);
+burgerCredits.addEventListener('click', closeBurgerMenu);
+for (let i = 0; i < burgerNavLinks.length; i++) {
+    burgerNavLinks[i].addEventListener('click', closeBurgerMenu);
+}
+
+document.addEventListener('click', (event) => {
+    const click = event.composedPath().includes(burgerMenu) || event.composedPath().includes(menuButton);
+    if ( !click ) closeBurgerMenu();
+});
+
