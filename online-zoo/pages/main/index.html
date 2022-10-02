@@ -9,11 +9,12 @@
     <link rel="icon" href="../../assets/icons/panda_icon.png">
 </head>
 <body>
+    <div class="dark"></div>
     <header class="header">
         <div class="nav-wrapper">
-            <a href="../../pages/main/index.html" class="logo">
-                <h1 class="logo-text">PetStory online</h1>
-                <img class="logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
+            <a href="../../pages/main/index.html" class="logo header-logo">
+                <h1 class="logo-text header-logo-text">PetStory online</h1>
+                <img class="logo-bamboo header-logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -21,7 +22,26 @@
                     <li><a href="#map" class="nav-link">Map</a></li>
                     <li><a href="#zoos" class="nav-link">Zoos</a></li>
                     <li><a href="../donate/index.html" class="nav-link">Donate</a></li>
-                    <li><a href="#contacts" class="nav-link">Contact Us</a></li>
+                    <li><a href="#contacts" class="nav-link">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-menu-button">
+            <span></span>
+        </div>
+        <div class="burger-menu">
+            <a href="../../pages/main/index.html" class="logo burger-logo">
+                <div class="logo-text burger-logo-text">PetStory online</div>
+                <img class="logo-bamboo burger-logo-bamboo" src="../../assets/icons/bamboo.svg" alt="Bamboo">
+            </a>
+            <nav class="burger-nav">
+                <ul class="burger-nav-list">
+                    <li><a href="#" class="burger-nav-link">About</a></li>
+                    <li><a href="#map" class="burger-nav-link">Map</a></li>
+                    <li><a href="#zoos" class="burger-nav-link">Zoos</a></li>
+                    <li><a href="../donate/index.html" class="burger-nav-link">Donate</a></li>
+                    <li><a href="#contacts" class="burger-nav-link">Contact us</a></li>
+                    <li><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" class="burger-credits">Designed by ©</a></li>
                 </ul>
             </nav>
         </div>
@@ -60,68 +80,75 @@
                     </button>
                 </div>
                 <div class="pets-cards-block">
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Giant Pandas</div>
-                            <div class="pet-destination">Native to Southwest China</div>
-                            <div class="pet-icon"></div>
+                    <div class="pets-cards-row first-row">
+                        <div class="pet-card pandas">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Giant Pandas</div>
+                                <div class="pet-destination">Native to Southwest China</div>
+                                <div class="pet-icon"></div>
+                            </div>
+                        </div>
+                        <div class="pet-card eagles">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Eagles</div>
+                                <div class="pet-destination">Native to South America</div>
+                                <div class="pet-icon"></div>
+                            </div>
+                        </div>
+                        <div class="pet-card gorilla">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Gorillas</div>
+                                <div class="pet-destination">Native to Congo</div>
+                                <div class="pet-icon"></div>
+                            </div>
+                        </div>
+                        <div class="pet-card alligators">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Alligators</div>
+                                <div class="pet-destination">
+                                    <p class="alligator-first-text">Native to Southeastern U. S.</p>
+                                    <p class="alligator-second-text">Native to Southeastern United States</p>
+                                </div>
+                                <div class="pet-icon"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Eagles</div>
-                            <div class="pet-destination">Native to South America</div>
-                            <div class="pet-icon"></div>
+                    <div class="pets-cards-row second-row">
+                        <div class="pet-card sloth">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Two-toed Sloth</div>
+                                <div class="pet-destination">Mesoamerica, South America</div>
+                                <div class="pet-icon"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Gorillas</div>
-                            <div class="pet-destination">Native to Congo</div>
-                            <div class="pet-icon"></div>
+                        <div class="pet-card cheetahs">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Cheetahs</div>
+                                <div class="pet-destination">Native to Africa</div>
+                                <div class="pet-icon"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Alligators</div>
-                            <div class="pet-destination">Native to Southeastern U. S.</div>
-                            <div class="pet-icon"></div>
+                        <div class="pet-card penguins">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Penguins</div>
+                                <div class="pet-destination">Native to Antarctica</div>
+                                <div class="pet-icon"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Two-toed Sloth</div>
-                            <div class="pet-destination">Mesoamerica, South America</div>
-                            <div class="pet-icon"></div>
-                        </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Cheetahs</div>
-                            <div class="pet-destination">Native to Africa</div>
-                            <div class="pet-icon"></div>
-                        </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Penguins</div>
-                            <div class="pet-destination">Native to Antarctica</div>
-                            <div class="pet-icon"></div>
-                        </div>
-                    </div>
-                    <div class="pet-card">
-                        <div class="pet-photo"></div>
-                        <div class="pet-text">
-                            <div class="pet-title">Gorillas</div>
-                            <div class="pet-destination">Native to Congo</div>
-                            <div class="pet-icon"></div>
+                        <div class="pet-card gorillas">
+                            <div class="pet-photo"></div>
+                            <div class="pet-text">
+                                <div class="pet-title">Gorillas</div>
+                                <div class="pet-destination">Native to Congo</div>
+                                <div class="pet-icon"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,7 +195,7 @@
             <h3 class="testimonials-title">Testimonials</h3>
             <div class="testimonials-wrapper">
                 <div class="testimonials-cards-wrapper">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card one">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
@@ -187,7 +214,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card two">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
@@ -207,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card three">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
@@ -227,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card four">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
@@ -246,12 +273,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card five">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
                                 <div class="testimonial-description">
-                                    <div class="testimonial-name"></div>
+                                    <div class="testimonial-name">Fredericka Michelin</div>
                                     <div class="testimonial-circs">
                                         <div class="testimonial-location">Local Austria</div>
                                         <div class="testimonial-separator">•</div>
@@ -259,15 +286,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="testimonial-feedback"></div>
+                            <div class="testimonial-feedback">
+                                <p> My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.</p>
+                                <p>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card six">
                         <div class="testimonial-inner-card">
                             <div class="testimonial-info">
                                 <div class="testimonial-avatar"></div>
                                 <div class="testimonial-description">
-                                    <div class="testimonial-name"></div>
+                                    <div class="testimonial-name">Oska Samborska</div>
                                     <div class="testimonial-circs">
                                         <div class="testimonial-location">Local Austria</div>
                                         <div class="testimonial-separator">•</div>
@@ -275,7 +305,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="testimonial-feedback"></div>
+                            <div class="testimonial-feedback">
+                                <p>Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.</p>
+                                <p>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,7 +349,7 @@
                             <div class="social-media-icon">
                                 <img src="../../assets/icons/Fill-211.svg" alt="Facebook icon" width="16" height="16" />
                             </div>
-                            Facebook
+                            <p>Facebook</p>
                         </a>
                     </li>
                     <li class="social-media-item">
@@ -324,7 +357,7 @@
                             <div class="social-media-icon">
                                 <img src="../../assets/icons/Fill-172.svg" alt="Twitter icon" width="16" height="16" />
                             </div>
-                            Twitter
+                            <p>Twitter</p>
                         </a>
                     </li>
                     <li class="social-media-item">
@@ -332,7 +365,7 @@
                             <div class="social-media-icon">
                                 <img src="../../assets/icons/Fill-166.svg" alt="Instagram icon" width="16" height="16" />
                             </div>
-                            Instagram
+                            <p>Instagram</p>
                         </a>
                     </li>
                     <li class="social-media-item">
@@ -340,18 +373,18 @@
                             <div class="social-media-icon">
                                 <img src="../../assets/icons/Fill-213.svg" alt="Youtube icon" width="18" height="18" />
                             </div>
-                            YouTube
+                            <p>YouTube</p>
                         </a>
                     </li>
                   </ul>
             </div>
             <div class="footer-navigation" id="contacts">
-                <nav class="nav">
+                <nav class="nav footer-nav">
                     <ul class="nav-list">
                         <li><a href="#" class="nav-link active-link">About</a></li>
                         <li><a href="#map" class="nav-link">Map</a></li>
                         <li><a href="#zoos" class="nav-link">Zoos</a></li>
-                        <li><a href="#contacts" class="nav-link">Contact Us</a></li>
+                        <li><a href="#contacts" class="nav-link">Contact us</a></li>
                     </ul>
                 </nav>
                 <div class="credits">

@@ -45,6 +45,16 @@ body {
     font-size: 16px;
 }
 
+.dark {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    transition: 0.5s;
+    display: none;
+}
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -55,6 +65,57 @@ body {
     color: white;
     background-color: black;
     z-index: 100;   
+}
+
+.burger-menu {
+    width: 100%;
+    height: 329px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+.burger-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.burger-nav-link,
+.burger-credits {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.2px;
+    transition: 0.2s;
+}
+
+.burger-nav-link:hover,
+.burger-credits:hover {
+    color:#FE9013;
+}
+
+.burger-nav-link:active,
+.burger-credits:active {
+    color:#4B9200;
+}
+
+.burger-menu-button {
+    display: none;
 }
 
 .nav-wrapper {
@@ -88,6 +149,27 @@ body {
     position: absolute;
     bottom: 6.2px;
     left: 8.5px;
+}
+
+.burger-logo,
+.burger-logo-text {
+    color:#FE9013;
+    font-size: 15.21px;
+}
+
+.burger-logo {
+    border: solid #FE9013 1px;
+    height: 41.6px;
+    width: 65.6px;
+    margin-bottom: 30px;
+}
+
+.burger-logo-bamboo {
+    width: 8.62px;
+    height: 17.79px;
+    bottom: 4.7px;
+    left: 7.5px;
+    filter: invert(55%) sepia(30%) saturate(1366%) hue-rotate(348deg) brightness(145%) contrast(117%);
 }
 
 .nav-list {
@@ -139,7 +221,8 @@ body {
     justify-content: flex-end;
     position: relative;
     width: 100%;
-    height: 780px;
+    max-height:780px;
+    height: 58.4vw;
     background-image: url('../../assets/images/Giant\ Panda.jfif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -286,12 +369,14 @@ body {
     background-image: url('../../assets/images/flower_foto1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -10;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .pets {
     position: relative;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .pets-cards-wrapper {
@@ -302,21 +387,28 @@ body {
 }
 
 .pets-cards-block {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1180px;
     margin: 0 auto;
     height: 892px;
+    gap: 20px;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 366px);
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
     overflow-x: hidden;
+}
+
+.pets-cards-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 1554px;
+    gap: 30px;
 }
 
 .pet-card {
     position: relative;
-    width: 100%;
+    width: 366px;
     height: 426px;
     border-radius: 5px;
     border: 1px solid transparent;
@@ -331,56 +423,56 @@ body {
     transition: 0.2s;
 }
 
-.pet-card:nth-of-type(1) > .pet-photo {
+.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(1) > .pet-photo {
     background-image: url('../../assets/images/pandas.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pet-card:nth-of-type(2) > .pet-photo {
+.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(2) > .pet-photo {
     background-image: url('../../assets/images/eagles.jfif');
     background-repeat: no-repeat;
     background-position: 23.5%;
     background-size: 177% 100%;
 }
 
-.pet-card:nth-of-type(3) > .pet-photo {
+.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(3) > .pet-photo {
     background-image: url('../../assets/images/gorillas_1.jfif');
     background-repeat: no-repeat;
     background-position: 24%;
     background-size: 167% 100%;
 }
 
-.pet-card:nth-of-type(4) > .pet-photo {
+.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(4) > .pet-photo {
     background-image: url('../../assets/images/alligators.jfif');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 100% 33%;
     background-size: cover;
 }
 
-.pet-card:nth-of-type(5) > .pet-photo {
+.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(1) > .pet-photo {
     background-image: url('../../assets/images/sloth.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pet-card:nth-of-type(6) > .pet-photo {
+.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(2) > .pet-photo {
     background-image: url('../../assets/images/cheetahs.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pet-card:nth-of-type(7) > .pet-photo {
+.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(3) > .pet-photo {
     background-image: url('../../assets/images/penguins.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pet-card:nth-of-type(8) > .pet-photo {
+.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(4) > .pet-photo {
     background-image: url('../../assets/images/gorillas_2.jfif');
     background-repeat: no-repeat;
     background-position: center;
@@ -407,6 +499,14 @@ body {
     transition: 0.2s;
 }
 
+.pet-destination p {
+    margin: 0;
+}
+
+.alligator-second-text {
+    display: none;
+}
+
 .text-hover {
     color: white;
     transform: translateY(-70px);
@@ -423,10 +523,10 @@ body {
     filter: brightness(50%);
 }
 
-.pet-card:nth-of-type(1) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(3) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(5) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(8) > .pet-text > .pet-icon {
+.pandas > .pet-text > .pet-icon,
+.gorilla > .pet-text > .pet-icon,
+.sloth > .pet-text > .pet-icon,
+.gorillas > .pet-text > .pet-icon {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -436,10 +536,10 @@ body {
     transition: 0.2s;
 }
 
-.pet-card:nth-of-type(2) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(4) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(6) > .pet-text > .pet-icon,
-.pet-card:nth-of-type(7) > .pet-text > .pet-icon {
+.eagles > .pet-text > .pet-icon,
+.alligators > .pet-text > .pet-icon,
+.cheetahs > .pet-text > .pet-icon,
+.penguins > .pet-text > .pet-icon {
     position: absolute;
     width: 48px;
     height: 38px;
@@ -503,6 +603,7 @@ body {
     background-image: url('../../assets/images/flower_foto2.png');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -10;
 }
 
 .flower-right {
@@ -515,6 +616,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotateY(180deg);
+    z-index: -10;
 }
 
 .choose-button,
@@ -639,13 +741,14 @@ body {
 .paying-block {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
 .paying-card {
     display: flex;
     flex-direction: column;
-    width: 168px;
+    width: 20%;
 }
 
 .paying-card-image {
@@ -763,13 +866,19 @@ body {
     background-position: 100% 15%;
 }
 
-.testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Fredericka_Michelin.jfif');
     background-size: cover;
     background-position: 30%;
 }
 
 .testimonial-card:nth-of-type(4) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+    background-image: url('../../assets/images/Mila_Riksha.jfif');
+    background-size: cover;
+}
+
+.testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Mila_Riksha.jfif');
     background-size: cover;
 }
@@ -900,6 +1009,7 @@ input[type=range]::-moz-range-track {
     background-repeat: no-repeat;
     background-size: cover;
     transform: matrix(-0.86, -0.5, -0.5, 0.86, 0, 0);
+    z-index: -10;
 }
 
 .footer {
@@ -1038,6 +1148,10 @@ input[type=range]::-moz-range-track {
     transition: 0.2s;
 }
 
+.social-media-link p {
+    margin: 0;
+}
+
 .social-media-link:active .social-media-icon {
     background-color:#4B9200;
 }
@@ -1047,11 +1161,11 @@ input[type=range]::-moz-range-track {
 }
 
 .social-media-link:hover .social-media-icon {
-    transform: translateY(-1px);
+    transform: scale(1.05);
 }
 
 .social-media-link:hover {
-    transform: scale(1.05);
+    font-size: 17px;
 }
 
 .social-media-icon {
@@ -1091,4 +1205,1156 @@ input[type=range]::-moz-range-track {
 .credits-link-hover {
     color: #4B9200;
     border-bottom: 2px solid #4B9200;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media (max-width: 1500px) {
+    .flower-top {
+        display: none;
+    }
+}
+
+@media (max-width: 1325px) {
+    .watch-block {
+        height: 584px;
+        background-size: 120%;
+    }
+
+    .watch-wrapper {
+        margin: 0;
+        position: absolute;
+        top: 122.8px;
+        right: 36px;
+    }
+
+    .orange-circle {
+        width: 367px;
+        height: 367px;
+        top: -54px;
+        left: -8px;
+    }
+
+    .watch-title {
+        font-size: 85px;
+        width: 400px;
+        height: 320px;
+        margin-bottom: 40px;
+    }
+
+    .watch-title span {
+        transform: translateX(8px);
+    }
+
+    .watch-button {
+        margin-bottom: 40px;
+    }
+
+    .pets-cards-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pets-cards-block {
+        max-width: 960px;
+        width: 100%;
+        height: 100%;
+        gap: 92px;
+    }
+
+    .pet-card {
+        width: 294px;
+        height: 354px;
+    }
+
+    .pet-photo {
+        height: 83%;
+    }
+
+    .pet-text {
+        height: 17%;
+    }
+
+    .text-hover {
+        transform: translateY(-60px);
+        font-size: 18px;
+    }
+
+    .button-left,
+    .button-right {
+        position: initial;
+    }
+
+    .slider-buttons {
+        gap: 171px;
+    }
+
+    .donations-wrapper {
+        margin: 69px 50px 100px 50px;
+    }
+
+    .testimonials-wrapper {
+        width: 900px;
+        padding: 10px 30px;
+    }
+
+    .footer-wrapper {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1001px) {
+    .header {
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    .nav-list {
+        gap: 48px;
+    }
+
+    
+    .backstage-text {
+        padding-left: 32px;
+        width: 51.7%;
+        transform: translateY(-10px);
+    }
+
+    .backstage-image {
+        width: 48.3%;
+        background-position: center;
+    }
+
+    .backstage-wrapper {
+        height: 408px;
+        padding: 0 30px;
+        margin-top: 109px;
+        margin-bottom: 142px;
+    }
+
+    .backstage-description {
+        padding-right: 5px;
+    }
+
+    .pets-cards-wrapper {
+        width: auto;
+    }
+
+    .pets-cards-block {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .first-row {
+        display: grid; 
+        grid-template-columns: 294px 294px; 
+        grid-template-rows: 354px 354px; 
+        gap: 92px 30px; 
+        grid-template-areas: 
+            ". ."
+            ". ."; 
+    }
+
+    .second-row {
+        display: grid; 
+        grid-template-columns: 294px 294px; 
+        grid-template-rows: 354px 354px; 
+        gap: 92px 30px; 
+        grid-template-areas: 
+            "cheetahs sloth"
+            "penguins gorillas"; 
+    }
+
+    .cheetahs { grid-area: cheetahs; }
+    .penguins { grid-area: penguins; }
+    .gorillas { grid-area: gorillas; }
+    .sloth { grid-area: sloth; }
+
+    .choose-button {
+        margin-bottom: 140px;
+    }
+
+    .flower-left {
+        left: -192px;
+        bottom: -259px;
+        background-size: 44%;
+    }
+
+    .flower-right {
+        bottom: -96px;
+        background-size: 65%;
+    }
+
+    .donations-wrapper {
+        margin: 30px 30px 50px 30px;
+        padding-top: 0;
+        height: auto;
+    }
+
+    .donations-title {
+        margin-top: 30px;
+        margin-bottom: 22px;
+    }
+
+    .donations-text-1,
+    .donations-text-2,
+    .donations-text-3 {
+        padding-left: 49px;
+    }
+
+    .donations-text-2,
+    .donations-text-3 {
+        padding-right: 78px;
+    }
+
+    .donations-text-1 {
+        margin-bottom: 20px;
+    }
+
+    .donations-text-3 {
+        margin-bottom: 40px;
+    }
+
+    .how-it-works {
+        margin-bottom: 10px;
+    }
+
+    .feed-button {
+        margin-bottom: 50px;
+    }
+
+    .feedback-button {
+        margin-bottom: 130px;
+    }
+
+    .footer-wrapper {
+        margin: 40px 30px 30px 30px;
+        grid-template-columns: 1fr 2.75fr;
+    }
+
+    .subscription-wrapper {
+        margin-right: 32px;
+    }
+
+    .subscription-title {
+        margin-bottom: 14px;
+    }
+
+    .donations {
+        margin-bottom: 100px;
+    }
+
+    .testimonials-title {
+        margin-bottom: 22px;
+    }
+
+    .testimonials-wrapper {
+        width: 100%;
+        padding: 10px 30px;
+    }
+
+    .testimonial-card {
+        width: 293px;
+    }
+
+    .testimonials-cards-wrapper {
+        grid-template-columns: repeat(6, 293px);
+        grid-template-areas: 
+        "one six five four two three"; 
+    }
+
+    .one { grid-area: one; }
+    .two { grid-area: two; }
+    .three { grid-area: three; }
+    .four { grid-area: four; }
+    .five { grid-area: five; }
+    .six { grid-area: six; }
+
+    .testimonial-card > .testimonial-inner-card > .testimonial-feedback {
+        margin-right: 10px;
+    }
+
+    .testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-feedback {
+        margin-right: 12px;
+    }
+    
+    .testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-feedback > p:first-of-type,
+    .testimonial-card:nth-of-type(6) > .testimonial-inner-card > .testimonial-feedback > p:first-of-type {
+        text-indent: 0.25em;
+    }
+
+    .testimonial-card {
+        background: linear-gradient(#F5F7F6, #F5F7F6) padding-box, linear-gradient(340deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    }
+
+    .input-range {
+        width: 42%;
+    }
+
+    .testimonials-slider {
+        margin-bottom: 48px;
+    }
+
+    .flower-bottom {
+        width: 240px;
+        height: 235.5px;
+        bottom: -42px;
+        right: -86px;
+    }
+}
+
+@media (max-width: 980px) {
+    .pets-cards-block {
+        max-width: 638px;
+    }
+
+    .paying-block {
+        justify-content: center;
+    }
+    
+    .paying-card {
+        width: 168px;
+    }
+
+    .arrow {
+        margin: 60px 5px 0 5px;
+    }
+
+    .testimonials-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .testimonials-cards-wrapper {
+        height: 363px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat (6, 109px); 
+        gap: 14px 0px; 
+        grid-template-areas: 
+          "one"
+          "six"
+          "five"
+          "four"
+          "two"
+          "three"; 
+    }
+
+    .testimonial-card {
+        height: 109px;
+        width: 100%;
+    }
+
+    .testimonial-feedback {
+        height: 37px;
+    }
+
+    .testimonials-slider {
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    .nav-wrapper {
+        margin-right: 10px;
+    }
+
+    .nav-list {
+        padding: 0;
+    }
+
+    .watch-block {
+        height: 420px;
+    }
+
+    .watch-wrapper {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        top: 100px;
+        left: 0;
+    }
+
+    .watch-title {
+        position: absolute;
+        right: 16px;
+        width: 255px;
+        height: 205px;
+        font-size: 54.42px;
+        line-height: 40.81px;
+    }
+
+    .watch-title span {
+        transform: translateX(4px);
+    }
+
+    .orange-circle {
+        width: 237.6px;
+        height: 237.6px;
+        top: -37px;
+        right: 71px;
+        left: auto;
+    }
+
+    .watch-button {
+        position: absolute;
+        top: 197px;
+        left: 20px;
+    }
+
+    .backstage-wrapper {
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .backstage-image {
+        display: none;
+    }
+
+    .backstage-text {
+        width: 100%;
+    }
+
+    .donations-wrapper {
+        margin: 30px 0 50px 0;
+    }
+
+    .paying-block {
+        gap: 42px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .paying-card {
+        position: relative;
+    }
+
+    .paying-card:nth-of-type(1)::before,
+    .paying-card:nth-of-type(3)::before {
+        content: '';
+        width: 88px;
+        height: 63px;
+        position: absolute;
+        top: -16px;
+        right: -57px;
+        background-image: url('../../assets/icons/arrow_green.svg');
+        background-repeat: no-repeat;
+        z-index: 100;
+    }
+}    
+
+@media (max-width: 641px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .header {
+        position: fixed;
+        height: 34px;
+        padding: 0 20px;
+    }
+
+    .header .nav-wrapper .nav {
+        display: none;
+    }
+
+    .header-logo {
+        border: none;
+        width: 46.86px;
+    }
+
+    .header-logo-text {
+        font-size: 12.3px;
+    }
+
+    .header-logo-bamboo {
+        height: 20px;
+        width: 6.5px;
+        bottom: 11.2px;
+        left: 3px;
+    }
+
+    .header-credits {
+        display: none;
+    }
+
+    .burger-menu-button {
+        display: block;
+        position: relative;
+        width: 18.5px;
+        height: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .burger-menu-button span, 
+    .burger-menu-button span::before, 
+    .burger-menu-button span::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .burger-menu-button span::before {
+        top: 4px;
+    }
+
+    .burger-menu-button span::after {
+        top: 8px;
+    }
+
+    .watch-block {
+        height: 373px;
+    }
+
+    .watch-wrapper {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        top: 82px;
+        left: 0;
+    }
+
+    .watch-title {
+        position: absolute;
+        right: 16px;
+        width: 255px;
+        height: 205px;
+        font-size: 54.42px;
+        line-height: 40.81px;
+    }
+
+    .watch-title span {
+        transform: translateX(4px);
+    }
+
+    .orange-circle {
+        width: 237.6px;
+        height: 237.6px;
+        top: -37px;
+        right: 71px;
+        left: auto;
+    }
+
+    .watch-button {
+        position: absolute;
+        top: 197px;
+        left: 20px;
+    }
+
+    .backstage-image {
+        display: none;
+    }
+
+    .backstage-wrapper {
+        justify-content: flex-start;
+        height: auto;
+        padding: 0 20px;
+        margin-top: 70px;
+        margin-bottom: 61px;
+    }
+
+    .backstage-text {
+        width: 82%;
+        padding-left: 0;
+    }
+
+    .backstage-title {
+        transform: translateX(3px);
+        margin-bottom: 21px;
+    }
+
+    .backstage-title-description {
+        margin-bottom: 29px;
+    }
+
+    .backstage-subtitle {
+        transform: translateX(3px);
+        margin-bottom: 20px;
+    }
+
+    .flower-top {
+        display: block;
+        height: 473px;
+        background-size: 79%;
+        top: -6px;
+        right: -165px;
+    }
+
+    .first-row {
+        display: grid; 
+        grid-template-columns: 285px 285px; 
+        grid-template-rows: 332px 332px; 
+        gap: 92px 30px; 
+        grid-template-areas: 
+            ". ."
+            ". ."; 
+    }
+
+    .second-row {
+        display: grid; 
+        grid-template-columns: 285px 285px; 
+        grid-template-rows: 332px 332px; 
+        gap: 92px 30px; 
+        grid-template-areas: 
+            "cheetahs sloth"
+            "penguins gorillas"; 
+    }
+
+    .pets-cards-wrapper {
+        margin-bottom: 50px;
+    }
+
+    .pets-cards-block {
+        max-width: 616px;
+        padding: 10px 8px;
+    }
+
+    .pet-card {
+        width: 285px;
+        height: 332px;
+    }
+
+    .pet-photo {
+        height: 86%;
+    }
+
+    .pet-text {
+        height: 14%;
+        padding: 9px 10px 10px 12px;
+    }
+
+    .pet-title {
+        font-size: 12.5px;
+    }
+
+    .pet-destination {
+        font-size: 11.6px;
+    }
+
+    .alligator-first-text {
+        display: none;
+    }
+
+    .alligator-second-text {
+        display: block;
+    }
+
+    .pandas > .pet-text > .pet-icon,
+    .gorilla > .pet-text > .pet-icon,
+    .sloth > .pet-text > .pet-icon,
+    .gorillas > .pet-text > .pet-icon {
+        width: 30px;
+        height: 30px;
+        right: 6px;
+        bottom: 9px;
+        background: url(../../assets/icons/banana_icon.svg) no-repeat center, url(../../assets/icons/bamboo_icon.svg) no-repeat 50% 30%;
+        background-size: 87% 87%;
+    }
+    
+    .eagles > .pet-text > .pet-icon,
+    .alligators > .pet-text > .pet-icon,
+    .cheetahs > .pet-text > .pet-icon,
+    .penguins > .pet-text > .pet-icon {
+        width: 37px;
+        height: 37px;
+        right: 5px;
+        bottom: 4px;
+        background: url(../../assets/icons/fish_icon.svg) no-repeat 110% 55%, url(../../assets/icons/steak_icon.svg) no-repeat 25% 30%;
+        background-size: 75% 58%;
+    }
+
+    .text-hover {
+        font-size: 14px;
+    }
+
+    .slider-buttons {
+        gap: 30px;
+        padding-bottom: 10px;
+    }
+
+    .choose-button {
+        margin-bottom: 100px;
+    }
+
+    .flower-left {
+        left: -253px;
+        bottom: -259px;
+    }
+
+    .flower-right {
+        bottom: -144px;
+        background-size: 48%;
+    }
+
+    .donations {
+        margin-bottom: 60px;
+    }
+
+    .donations-wrapper {
+        margin: 20px 0;
+    }
+
+    .donations-title {
+        font-size: 42px;
+        margin-top: 9px;
+        margin-bottom: 21px;
+    }
+
+    .donations-text-1,
+    .donations-text-2,
+    .donations-text-3 {
+        padding-left: 20px;
+    }
+
+    .donations-text-2,
+    .donations-text-3 {
+        padding-right: 20px;
+    }
+
+    .donations-text-1 {
+        font-size: 22px;
+        margin-bottom: 19px;
+    }
+
+    .donations-text-3 {
+        margin-bottom: 30px;
+    }
+    
+    .how-it-works {
+        transform: translateX(-6px);
+    }
+
+    .how-it-works-title {
+        margin-bottom: 22px;
+        text-indent: 10px;
+    }
+
+    .paying-block {
+        margin-bottom: 30px;
+    }
+
+    .feed-button {
+        margin-bottom: 60px;
+    }
+
+    .testimonials-cards-wrapper {
+        margin-bottom: 36px;
+    }
+
+    .feedback-button {
+        width: 240px;
+        margin-bottom: 70px;
+    }
+
+    .testimonial-card {
+        padding: 12px 11px 17px 10px;
+    }
+
+    .testimonial-avatar {
+        margin-right: 10px;
+    }
+
+    .testimonial-feedback {
+        margin-left: 6px;
+    }
+
+    .flower-bottom {
+        background-size: 65%;
+        bottom: -101px;
+        right: -52px;
+    }
+
+    .footer {
+        height: 282px;
+    }
+
+    .footer-wrapper {
+        margin: 2px 20px 20px 21px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 75px 100px 82px; 
+        gap: 15px 0px;
+        grid-template-areas: 
+        "logo social-media"
+        "donation-block social-media"
+        "footer-navigation footer-navigation"; 
+    }
+    
+    .social-media { grid-area: social-media; }
+    .logo { grid-area: logo; }
+    .footer-navigation { grid-area: footer-navigation; }
+    .donation-block { grid-area: donation-block; }          
+    
+    .footer-wrapper .logo {
+        margin: 11px 5px 0 0;
+    }
+
+    .subscription,
+    .social-media-link p {
+        display: none;
+    }
+
+    .social-media {
+        justify-content: flex-end;
+    }
+
+    .social-media-list li {
+        margin-bottom: 15px;
+    }
+
+    .social-media-icon {
+        margin-right: 0;
+    }
+
+    .donation-block {
+        margin-top: 5px;
+    }
+
+    .footer-navigation .nav .nav-list {
+        gap: 37px;
+    }
+
+    .social-media-link:hover .social-media-icon {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 615px) {
+    .pets-cards-row {
+        width: auto;
+        margin: 0 auto;
+        grid-template-columns: 285px;
+        gap: 20px 30px;
+        grid-template-areas:
+        "."
+        "."
+        "."
+        ".";
+    }
+    
+    .second-row,
+    .slider-buttons {
+        display: none;
+    }
+
+    .paying-block {
+        flex-direction: column;
+    }
+
+    .paying-card:nth-of-type(1)::before,
+    .paying-card:nth-of-type(3)::before {
+        top: unset;
+        bottom: -40px;
+        right: -43px;
+        transform: rotate(85deg);
+    }
+
+    .footer-wrapper {
+        margin: 5px 10px;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 15px 0px; 
+        grid-template-areas: 
+        "logo"
+        "social-media"
+        "donation-block"
+        "footer-navigation"; 
+    }
+
+    .logo { grid-area: logo; }
+    .social-media { grid-area: social-media; }
+    .donation-block { grid-area: donation-block; }
+    .footer-navigation { grid-area: footer-navigation; }
+
+    .footer {
+        height: 334px;
+    }
+
+    .footer-wrapper .logo {
+        width: 130px;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .footer-wrapper .logo .logo-bamboo {
+        bottom: 19.2px;
+        left: 71.5px;
+    }
+    
+    .social-media {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .social-media-list {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .donation-block {
+        margin: 0;
+        transform: translateY(-3px);
+    }
+
+    .footer-navigation {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .footer-nav {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .footer-navigation .nav .nav-list {
+        gap: 30px;
+    }
+    
+    .credits {
+        order: 1;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 538px) {
+    .watch-block {
+        height: 220px;
+        background-position: 50% 0%;
+    }
+
+    .watch-wrapper {
+        top: 75px;
+        align-items: center;
+    }
+
+    .watch-title {
+        height: 102.44px;
+        width: 128.13px;
+        font-size: 28px;
+        line-height: 21px;
+        right: 10px;
+    }
+    
+    .watch-title span {
+        transform: translateX(0);
+    }
+
+    .orange-circle {
+        width: 119px;
+        height: 119px;
+        top: -19px;
+        right: 39px;
+    }
+
+    .watch-button {
+        top: 166px;
+        left: unset;
+        margin-bottom: 0;
+    }
+
+    .backstage {
+        margin-top: 114px;
+    }
+
+    .backstage-wrapper {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .backstage {
+        overflow: visible;
+    }
+
+    .backstage-title {
+        font-size: 24px;
+        margin-bottom: 9px;
+    }
+
+    .backstage-wrapper {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .backstage-text {
+        width: 100%;
+    }
+
+    .backstage-title {
+        transform: translateX(0);
+    }
+    
+    .backstage-title-description {
+        margin-left: 2px;
+        margin-bottom: 18.5px;
+    }
+
+    .backstage-subtitle {
+        margin-bottom: 10px;
+    }
+
+    .backstage-description {
+        line-height: 22px;
+    }
+
+    .flower-top {
+        width: 31px;
+        background-image: url('../../assets/images/flower_foto3.png');
+        background-size: 100%;
+        top: -75px;
+        right: 0;
+    }
+}
+
+@media (max-width: 330px) {
+    .watch-button:hover,
+    .choose-button:hover,
+    .feed-button:hover,
+    .donation-button:hover {
+        transform: scale(1.01);
+    }
+}
+
+@media (max-width: 321px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .burger-logo {
+        margin-bottom: 13px;
+    }
+
+    .pet-text {
+        padding: 8px 10px 10px 12px;
+    }
+
+    .pets-cards-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .choose-button {
+        margin-bottom: 60px;
+    }
+
+    .flower-left {
+        left: -79px;
+        bottom: -388px;
+        background-size: 15.5%;
+    }
+
+    .flower-right {
+        right: -20px;
+        bottom: -209px;
+        background-size: 25%;
+    }
+
+    .donations-wrapper {
+        margin: 20px 10px;
+    }
+
+    .donations-title {
+        font-size: 24px;
+        margin-top: 21px;
+        margin-bottom: 10px;
+    }
+
+    .donations-text-1 {
+        font-size: 18px;
+        padding: 0 2px 0 0 ;
+        text-align: center;
+    }
+
+    .donations-text-2, 
+    .donations-text-3 {
+        display: none;
+    }
+
+    .how-it-works-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .paying-card-image {
+        margin-bottom: 10px;
+    }
+
+    .paying-block {
+        padding-left: 8px;
+        margin-bottom: 23px;
+        gap: 31px;
+    }
+
+    .paying-card-text{
+        line-height: 137%;
+    }    
+
+    .paying-card:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+
+    .paying-card:nth-of-type(3)::before {
+        bottom: -25px;
+    }
+
+    .feed-button {
+        margin-bottom: 40px;
+    }
+
+    .donations {
+        margin-bottom: 30px;
+    }
+
+    .testimonials-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .testimonials-wrapper {
+        padding: 10px;
+    }
+
+    .testimonial-card {
+        padding: 8px 11px 17px 10px;
+    }
+
+    .testimonial-avatar {
+        margin-right: 7px;
+    }
+
+    .testimonial-feedback {
+        margin-left: 7px;
+    }
+
+    .testimonials-cards-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .feedback-button {
+        margin-bottom: 50px;
+    }
+
+    .flower-bottom {
+        transform: matrix(-0.97, -0.26, -0.26, 0.97, 0, 0);
+        background-size: 32%;
+        bottom: -158px;
+        right: -17px;
+    }
 }
