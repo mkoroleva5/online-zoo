@@ -43,7 +43,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const dark = document.querySelector('.dark');
 const burgerNavLinks = document.querySelectorAll('.burger-nav-link');
 const burgerCredits = document.querySelector('.burger-credits');
-const closeButton = document.querySelector('.close-button');
+const closeButton = document.querySelector('.burger-close-button');
 
 const openBurgerMenu = () => {
     burgerMenu.style.transform = 'translateX(0)';
@@ -82,7 +82,39 @@ testimonialsSlider.addEventListener('input', () => {
     }
 });
 
+// Testimonials popup
 
-    
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+const darkBG = document.querySelector('.dark-2');
+const popupCards =  document.querySelectorAll('.popup-card-wrapper');
+const popupsWrapper = document.querySelector('.testimonials-popups');
+const closePopupButton = document.querySelectorAll('.close-popup-button');
+  
+for (let i = 0; i < testimonialCards.length; i++) {
+    testimonialCards[i].addEventListener('click', () => {
+        if (window.innerWidth < 981) {
+            darkBG.style.display = 'block';
+            if (i === 0) popupCards[0].style.top = '100px';
+            if (i === 4) popupCards[1].style.top = '100px';
+            if (i === 5) popupCards[2].style.top = '100px';
+        }  
+    })  
+}
 
+function closePopups () {
+    darkBG.style.display = 'none';
+    popupCards[0].style.top = '-500px';
+    popupCards[1].style.top = '-500px';
+    popupCards[2].style.top = '-500px';
+}
 
+document.addEventListener('click', (event) => {
+    const click = event.composedPath().includes(popupsWrapper) || event.composedPath().includes(testimonialCards[0]) || event.composedPath().includes(testimonialCards[4]) || event.composedPath().includes(testimonialCards[5]);
+    if ( !click ) {
+        closePopups();
+    }
+});
+
+for (let i = 0; i < closePopupButton.length; i++) {
+    closePopupButton[i].addEventListener('click', closePopups);
+}

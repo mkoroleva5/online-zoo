@@ -64,7 +64,7 @@ for (let i = 0; i < creditsLinkText.length; i++) {
 }
 
 // Amount item checked
-/*
+
 const amountItems = document.querySelectorAll('.amount-radio');
 
 function changeChecked () {
@@ -80,19 +80,28 @@ function changeChecked () {
 }
 
 window.addEventListener('resize', changeChecked);
-*/
 
+/*
 // Amount input
 
 const amountItems = document.querySelectorAll('.amount-radio');
 const amountSums = document.querySelectorAll('.amount-text');
 
+if (amountItems[5].checked === true) amountInput.value = 100;
+
 for (let i = 0; i < amountSums.length; i++) {
-    amountItems[i].addEventListener('click', () => {
+    amountItems[i].addEventListener('input', () => {
         amountInput.value = amountSums[i].innerHTML;
     });
 
-    amountInput.addEventListener('change', () => {
+    amountInput.addEventListener('input', () => {
+
+        setTimeout (() => { 
+            if (amountInput.value.length > 4) {
+                amountInput.value = amountInput.value.substr(0, 4);
+            }
+        }, 500)
+        
         if (amountInput.value == 5000) {
             amountItems[i].checked = false;
             amountItems[0].checked = true;
@@ -130,7 +139,7 @@ for (let i = 0; i < amountSums.length; i++) {
         }
     });
 }
-
+*/
 // Burger menu
 
 const menuButton = document.querySelector('.burger-menu-button');

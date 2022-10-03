@@ -1147,6 +1147,10 @@ input[type=number] {
 }
 
 @media (max-width: 750px) {
+    .header .nav-wrapper .nav .nav-list {
+        gap: 28px;
+    }
+
     .form-line-label {
         width: 60px;
     }
@@ -1158,6 +1162,10 @@ input[type=number] {
 }
 
 @media (max-width: 680px) {
+    .header .nav-wrapper .nav .nav-list {
+        gap: 15px;
+    }
+
     .progress-bar {
         left: -17px;
         width: 107%;
