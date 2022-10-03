@@ -836,11 +836,12 @@ body {
 
 .testimonials-cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 268px);
+    grid-template-columns: repeat(11, 268px);
     grid-column-gap: 30px;
     width: 100%;
     max-width: 1160px;
     margin-bottom: 18px;
+    transition: 0.5s;
 }
 
 .testimonial-card {
@@ -883,24 +884,29 @@ body {
     margin-right: 10px;
 }
 
-.testimonial-card:nth-of-type(1) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(1) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(7) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/icons/avatar.svg');
 }
 
-.testimonial-card:nth-of-type(2) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(2) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(8) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Oskar_Samborsky.jfif');
     background-size: cover;
     background-position: 100% 15%;
 }
 
 .testimonial-card:nth-of-type(3) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
-.testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(5) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(9) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(11) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Fredericka_Michelin.jfif');
     background-size: cover;
     background-position: 30%;
 }
 
-.testimonial-card:nth-of-type(4) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
+.testimonial-card:nth-of-type(4) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar,
+.testimonial-card:nth-of-type(10) > .testimonial-inner-card > .testimonial-info > .testimonial-avatar {
     background-image: url('../../assets/images/Mila_Riksha.jfif');
     background-size: cover;
 }
@@ -965,7 +971,7 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 19.2%;
+    width: 12.5%;
     height: 7px;
     border-radius: 5px;
     background-color:#FE9013;
@@ -974,7 +980,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-    width: 19.2%;
+    width: 12.5%;
     height: 7px;
     border-radius: 5px;
     background-color:#FE9013;
@@ -1489,9 +1495,9 @@ input[type=range]::-moz-range-track {
     }
 
     .testimonials-cards-wrapper {
-        grid-template-columns: repeat(6, 293px);
+        grid-template-columns: repeat(11, 293px);
         grid-template-areas: 
-        "one six five four two three"; 
+        "one six five four two three seven eight nine ten eleven"; 
     }
 
     .one { grid-area: one; }
@@ -1500,6 +1506,11 @@ input[type=range]::-moz-range-track {
     .four { grid-area: four; }
     .five { grid-area: five; }
     .six { grid-area: six; }
+    .seven { grid-area: seven; }
+    .eight { grid-area: eight; }
+    .nine { grid-area: nine; }
+    .ten { grid-area: ten; }
+    .eleven { grid-area: eleven; }
 
     .testimonial-card > .testimonial-inner-card > .testimonial-feedback {
         margin-right: 10px;
@@ -1564,7 +1575,7 @@ input[type=range]::-moz-range-track {
         margin-bottom: 40px;
         display: grid; 
         grid-template-columns: 1fr; 
-        grid-template-rows: repeat (6, 109px); 
+        grid-template-rows: repeat (11, 109px); 
         gap: 14px 0px; 
         grid-template-areas: 
           "one"
@@ -1572,7 +1583,12 @@ input[type=range]::-moz-range-track {
           "five"
           "four"
           "two"
-          "three"; 
+          "three"
+          "seven"
+          "eight"
+          "nine"
+          "ten"
+          "eleven"; 
     }
 
     .testimonial-card {

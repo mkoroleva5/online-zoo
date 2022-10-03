@@ -67,3 +67,22 @@ document.addEventListener('click', (event) => {
     if ( !click ) closeBurgerMenu();
 });
 
+
+// Testimonials slider
+
+const testimonials = document.querySelector('.testimonials-cards-wrapper');
+const testimonialsSlider = document.querySelector('.input-range');
+
+
+testimonialsSlider.addEventListener('input', () => {
+    if (window.innerWidth > 1001) {
+        testimonials.style.transform = `translateX(-${testimonialsSlider.value*300}px)`;
+    } else if (window.innerWidth <= 1001) {
+        testimonials.style.transform = `translateX(-${testimonialsSlider.value*323}px)`;
+    }
+});
+
+
+    
+
+
