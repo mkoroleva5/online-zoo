@@ -425,7 +425,6 @@ body {
 
 .pets-cards-block {
     display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 1180px;
     margin: 0 auto;
@@ -435,12 +434,53 @@ body {
     overflow-x: hidden;
 }
 
+.slider {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    left: -1188px;
+}
+
+@keyframes move-right {
+    from {left: -1188px;}
+    to {left: -2376px;}
+}
+  
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1.5s;
+}
+  
+@keyframes move-left {
+    from {left: -1188px;}
+    to {left: 0;}
+}
+  
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1.5s;
+}
+
+.item-active,
+.item-left,
+.item-right {
+    height: 872px;
+    width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+
 .pets-cards-row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 1554px;
     gap: 30px;
+}
+
+.first-row {
+    margin-bottom: 20px;
 }
 
 .pet-card {
@@ -460,56 +500,56 @@ body {
     transition: 0.2s;
 }
 
-.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(1) > .pet-photo {
+.card1 > .pet-photo {
     background-image: url('../../assets/images/pandas.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(2) > .pet-photo {
+.card2 > .pet-photo {
     background-image: url('../../assets/images/eagles.jfif');
     background-repeat: no-repeat;
     background-position: 23.5%;
     background-size: 177% 100%;
 }
 
-.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(3) > .pet-photo {
+.card3 > .pet-photo {
     background-image: url('../../assets/images/gorillas_1.jfif');
     background-repeat: no-repeat;
     background-position: 24%;
     background-size: 167% 100%;
 }
 
-.pets-cards-row:nth-of-type(1) > .pet-card:nth-of-type(4) > .pet-photo {
+.card4 > .pet-photo {
     background-image: url('../../assets/images/alligators.jfif');
     background-repeat: no-repeat;
     background-position: 100% 33%;
     background-size: cover;
 }
 
-.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(1) > .pet-photo {
+.card5 > .pet-photo {
     background-image: url('../../assets/images/sloth.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(2) > .pet-photo {
+.card6 > .pet-photo {
     background-image: url('../../assets/images/cheetahs.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(3) > .pet-photo {
+.card7 > .pet-photo {
     background-image: url('../../assets/images/penguins.jfif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.pets-cards-row:nth-of-type(2) > .pet-card:nth-of-type(4) > .pet-photo {
+.card8 > .pet-photo {
     background-image: url('../../assets/images/gorillas_2.jfif');
     background-repeat: no-repeat;
     background-position: center;
@@ -1379,6 +1419,7 @@ input[type=range]::-moz-range-track {
 
     .slider-buttons {
         gap: 171px;
+        top: -30px;
     }
 
     .donations-wrapper {
@@ -1603,6 +1644,16 @@ input[type=range]::-moz-range-track {
 @media (max-width: 980px) {
     .pets-cards-block {
         max-width: 638px;
+    }
+
+    .slider-buttons {
+        gap: 30px;
+        z-index: 1;
+    }
+
+    .pet-card:nth-of-type(3),
+    .pet-card:nth-of-type(6) {
+        opacity: 0;
     }
 
     .paying-block {
@@ -1931,6 +1982,14 @@ input[type=range]::-moz-range-track {
             "penguins gorillas"; 
     }
 
+    .item-active {
+        height: 820px;
+    }
+
+    .slider-buttons {
+        top: -57px;
+    }
+
     .pets-cards-wrapper {
         margin-bottom: 50px;
     }
@@ -2164,8 +2223,23 @@ input[type=range]::-moz-range-track {
     }
     
     .second-row,
-    .slider-buttons {
+    .slider-buttons,
+    .pet-card:nth-of-type(5),
+    .pet-card:nth-child(6) {
         display: none;
+    }
+
+    .pets-cards-block {
+        padding: 10px 0;
+    }
+
+    .item-active {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100vw;
+        height: auto;
+        gap: 20px;
     }
 
     .paying-block {

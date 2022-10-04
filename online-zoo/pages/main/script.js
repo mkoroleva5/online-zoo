@@ -118,3 +118,118 @@ document.addEventListener('click', (event) => {
 for (let i = 0; i < closePopupButton.length; i++) {
     closePopupButton[i].addEventListener('click', closePopups);
 }
+
+// Main slider
+
+const slider = document.querySelector('.slider');
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+const itemLeft = document.querySelector('.item-left');
+const itemCenter = document.querySelector('.item-active');
+const itemRight = document.querySelector('.item-right');
+
+const card1 = document.querySelector('.card1');
+const card2 = document.querySelector('.card2');
+const card3 = document.querySelector('.card3');
+const card4 = document.querySelector('.card4');
+const card5 = document.querySelector('.card5');
+const card6 = document.querySelector('.card6');
+const card7 = document.querySelector('.card7');
+const card8 = document.querySelector('.card8');
+
+const moveLeft = () => {
+    slider.classList.add('transition-left');
+    buttonLeft.removeEventListener('click', moveLeft);
+    buttonRight.removeEventListener('click', moveRight);
+    buttonLeft.setAttribute('disabled', true);
+    buttonRight.setAttribute('disabled', true);
+};
+
+const moveRight = () => {
+    slider.classList.add('transition-right');
+    buttonLeft.setAttribute('disabled', true);
+    buttonRight.setAttribute('disabled', true);
+};
+
+let cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8];
+
+const generateCenter = () => {
+    itemCenter.innerHTML = '';
+
+    let randomCards = [];
+    while (randomCards.length < 6) {
+        let num = Math.floor(Math.random() * 7);
+        randomCards.push(cardsArray[num]);
+        randomCards = [...new Set(randomCards)];
+    }
+        
+    itemCenter.appendChild(randomCards[0]);
+    itemCenter.appendChild(randomCards[1]);
+    itemCenter.appendChild(randomCards[2]);
+    itemCenter.appendChild(randomCards[3]);
+    itemCenter.appendChild(randomCards[4]);
+    itemCenter.appendChild(randomCards[5]);
+}
+
+const generateLeft = () => {
+    itemLeft.innerHTML = '';
+
+    let randomCards = [];
+    while (randomCards.length < 6) {
+        let num = Math.floor(Math.random() * 8);
+        randomCards.push(cardsArray[num]);
+        randomCards = [...new Set(randomCards)];
+    }
+    
+    itemLeft.appendChild(randomCards[0]);
+    itemLeft.appendChild(randomCards[1]);
+    itemLeft.appendChild(randomCards[2]);
+    itemLeft.appendChild(randomCards[3]);
+    itemLeft.appendChild(randomCards[4]);
+    itemLeft.appendChild(randomCards[5]);
+}
+
+const generateRight = () => {
+    itemRight.innerHTML = '';
+    
+    let randomCards = [];
+    while (randomCards.length < 6) {
+        let num = Math.floor(Math.random() * 8);
+        randomCards.push(cardsArray[num]);
+        randomCards = [...new Set(randomCards)];
+    }
+    
+    itemRight.appendChild(randomCards[0]);
+    itemRight.appendChild(randomCards[1]);
+    itemRight.appendChild(randomCards[2]);
+    itemRight.appendChild(randomCards[3]);
+    itemRight.appendChild(randomCards[4]);
+    itemRight.appendChild(randomCards[5]);
+}
+
+buttonLeft.addEventListener('click', () => {
+    generateLeft();
+    moveLeft();
+});
+
+buttonRight.addEventListener('click', () => {
+    generateRight();
+    moveRight();
+});
+
+slider.addEventListener('animationend', (event) => {
+
+    if (event.animationName === 'move-left') {
+        slider.classList.remove('transition-left');
+        itemRight.innerHTML = itemLeft.innerHTML;
+        itemCenter.innerHTML = itemLeft.innerHTML;
+
+    } else if (event.animationName === 'move-right') {
+        slider.classList.remove('transition-right');
+        itemLeft.innerHTML = itemRight.innerHTML;
+        itemCenter.innerHTML = itemRight.innerHTML;  
+    }
+    buttonLeft.removeAttribute('disabled');
+    buttonRight.removeAttribute('disabled');
+});

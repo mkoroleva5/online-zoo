@@ -62,7 +62,7 @@ for (let i = 0; i < creditsLinkText.length; i++) {
         creditsLinkText[i].classList.remove('credits-link-hover');
     })
 }
-
+/*
 // Amount item checked
 
 const amountItems = document.querySelectorAll('.amount-radio');
@@ -80,8 +80,8 @@ function changeChecked () {
 }
 
 window.addEventListener('resize', changeChecked);
+*/
 
-/*
 // Amount input
 
 const amountItems = document.querySelectorAll('.amount-radio');
@@ -95,7 +95,7 @@ for (let i = 0; i < amountSums.length; i++) {
     });
 
     amountInput.addEventListener('input', () => {
-
+        amountItems[i].checked = false;
         setTimeout (() => { 
             if (amountInput.value.length > 4) {
                 amountInput.value = amountInput.value.substr(0, 4);
@@ -139,7 +139,7 @@ for (let i = 0; i < amountSums.length; i++) {
         }
     });
 }
-*/
+
 // Burger menu
 
 const menuButton = document.querySelector('.burger-menu-button');
