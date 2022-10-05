@@ -67,7 +67,6 @@ document.addEventListener('click', (event) => {
     if ( !click ) closeBurgerMenu();
 });
 
-
 // Testimonials slider
 
 const testimonials = document.querySelector('.testimonials-cards-wrapper');
@@ -154,34 +153,14 @@ const moveRight = () => {
 
 let cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8];
 
-const generateCenter = () => {
-    itemCenter.innerHTML = '';
-
-    let randomCards = [];
-    while (randomCards.length < 6) {
-        let num = Math.floor(Math.random() * 7);
-        randomCards.push(cardsArray[num]);
-        randomCards = [...new Set(randomCards)];
-    }
-        
-    itemCenter.appendChild(randomCards[0]);
-    itemCenter.appendChild(randomCards[1]);
-    itemCenter.appendChild(randomCards[2]);
-    itemCenter.appendChild(randomCards[3]);
-    itemCenter.appendChild(randomCards[4]);
-    itemCenter.appendChild(randomCards[5]);
-}
-
 const generateLeft = () => {
-    itemLeft.innerHTML = '';
-
     let randomCards = [];
     while (randomCards.length < 6) {
         let num = Math.floor(Math.random() * 8);
         randomCards.push(cardsArray[num]);
         randomCards = [...new Set(randomCards)];
     }
-    
+    itemLeft.innerHTML = '';
     itemLeft.appendChild(randomCards[0]);
     itemLeft.appendChild(randomCards[1]);
     itemLeft.appendChild(randomCards[2]);
@@ -191,15 +170,13 @@ const generateLeft = () => {
 }
 
 const generateRight = () => {
-    itemRight.innerHTML = '';
-    
     let randomCards = [];
     while (randomCards.length < 6) {
         let num = Math.floor(Math.random() * 8);
         randomCards.push(cardsArray[num]);
         randomCards = [...new Set(randomCards)];
     }
-    
+    itemRight.innerHTML = '';
     itemRight.appendChild(randomCards[0]);
     itemRight.appendChild(randomCards[1]);
     itemRight.appendChild(randomCards[2]);
@@ -207,6 +184,9 @@ const generateRight = () => {
     itemRight.appendChild(randomCards[4]);
     itemRight.appendChild(randomCards[5]);
 }
+
+generateRight();
+itemCenter.innerHTML = itemRight.innerHTML;
 
 buttonLeft.addEventListener('click', () => {
     generateLeft();
@@ -219,7 +199,6 @@ buttonRight.addEventListener('click', () => {
 });
 
 slider.addEventListener('animationend', (event) => {
-
     if (event.animationName === 'move-left') {
         slider.classList.remove('transition-left');
         itemRight.innerHTML = itemLeft.innerHTML;
