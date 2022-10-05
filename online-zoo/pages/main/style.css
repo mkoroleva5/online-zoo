@@ -461,6 +461,26 @@ body {
     animation-duration: 1.5s;
 }
 
+@keyframes move-right-tablet {
+    from {left: -648px;}
+    to {left: -1296px;}
+}
+
+.transition-right-tablet {
+    animation-name: move-right-tablet;
+    animation-duration: 1.5s;
+}
+
+@keyframes move-left-tablet {
+    from {left: -648px;}
+    to {left: 0;}
+}
+  
+.transition-left-tablet {
+    animation-name: move-left-tablet;
+    animation-duration: 1.5s;
+}
+
 .item-active,
 .item-left,
 .item-right {
@@ -490,7 +510,6 @@ body {
     border-radius: 5px;
     border: 1px solid transparent;
     background: linear-gradient(113.96deg, #F9804B 0%, #FE9013 100%);
-    cursor: pointer;
 }
 
 .pet-photo {
@@ -584,17 +603,19 @@ body {
     display: none;
 }
 
-.text-hover {
+.pet-card:hover .pet-title,
+.pet-card:hover .pet-destination
+ {
     color: white;
     transform: translateY(-70px);
     font-size: 22px;
 }
 
-.icon-hover {
+.pet-card:hover .pet-icon {
     transform: translateY(-55px);
 }
 
-.card-transform {
+.pet-card:hover .pet-photo {
     border-radius: 5px;
     transform: scale(1.06);
     filter: brightness(50%);
@@ -633,7 +654,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
 }
 
 .slider-button {
@@ -644,6 +664,7 @@ body {
     border: none;
     cursor: pointer;
     transition: 0.2s;
+    z-index: 1;
 }
 
 .button-left {
@@ -1331,7 +1352,7 @@ input[type=range]::-moz-range-track {
     text-decoration: none;
 }
 
-.credits-link-hover {
+.credits-link:hover .credits-text {
     color: #4B9200;
     border-bottom: 2px solid #4B9200;
 }
@@ -1408,7 +1429,8 @@ input[type=range]::-moz-range-track {
         height: 17%;
     }
 
-    .text-hover {
+    .pet-card:hover .pet-title,
+    .pet-card:hover .pet-destination {
         transform: translateY(-60px);
         font-size: 18px;
     }
@@ -1421,6 +1443,12 @@ input[type=range]::-moz-range-track {
     .slider-buttons {
         gap: 171px;
         top: -30px;
+    }
+
+    .choose-button {
+        margin-bottom: 70px;
+        position: relative;
+        top: -70px;
     }
 
     .donations-wrapper {
@@ -1503,10 +1531,6 @@ input[type=range]::-moz-range-track {
     .penguins { grid-area: penguins; }
     .gorillas { grid-area: gorillas; }
     .sloth { grid-area: sloth; }
-
-    .choose-button {
-        margin-bottom: 140px;
-    }
 
     .flower-left {
         left: -192px;
@@ -1659,9 +1683,19 @@ input[type=range]::-moz-range-track {
         gap: 30px;
     }
 
+    .item-active,
+    .item-left,
+    .item-right {
+        width: 618px;
+    }
+
+    .slider {
+        left: -648px;
+    }
+
     .pet-card:nth-of-type(3),
     .pet-card:nth-of-type(6) {
-        opacity: 0;
+        display: none;
     }
 
     .paying-block {
@@ -1781,6 +1815,7 @@ input[type=range]::-moz-range-track {
     .backstage-wrapper {
         height: auto;
         align-items: flex-start;
+        margin-bottom: 40px;
     }
 
     .backstage-image {
@@ -1990,12 +2025,14 @@ input[type=range]::-moz-range-track {
             "penguins gorillas"; 
     }
 
-    .item-active {
+    .item-active,
+    .item-left,
+    .item-right {
         height: 820px;
     }
 
     .slider-buttons {
-        top: -57px;
+        top: -30px;
     }
 
     .pets-cards-wrapper {
@@ -2061,7 +2098,8 @@ input[type=range]::-moz-range-track {
         background-size: 75% 58%;
     }
 
-    .text-hover {
+    .pet-card:hover .pet-title,
+    .pet-card:hover .pet-destination {
         font-size: 14px;
     }
 
@@ -2071,7 +2109,9 @@ input[type=range]::-moz-range-track {
     }
 
     .choose-button {
-        margin-bottom: 100px;
+        margin-bottom: 35px;
+        position: relative;
+        top: -65px;
     }
 
     .flower-left {
@@ -2239,6 +2279,11 @@ input[type=range]::-moz-range-track {
 
     .pets-cards-block {
         padding: 10px 0;
+    }
+
+    .choose-button {
+        top: 0;
+        margin-bottom: 100px;
     }
 
     .item-active {

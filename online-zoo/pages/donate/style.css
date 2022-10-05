@@ -958,7 +958,7 @@ input[type=number] {
     text-decoration: none;
 }
 
-.credits-link-hover {
+.credits-link:hover .credits-text {
     color: #4B9200;
     border-bottom: 2px solid #4B9200;
 }

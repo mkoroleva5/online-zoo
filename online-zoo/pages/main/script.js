@@ -1,41 +1,3 @@
-// Cards animation
-
-const cards = document.querySelectorAll('.pet-card');
-const cardsPhoto = document.querySelectorAll('.pet-photo');
-const cardsText = document.querySelectorAll('.pet-text');
-const cardsTitle = document.querySelectorAll('.pet-title');
-const cardsDestination = document.querySelectorAll('.pet-destination');
-const cardsIcons = document.querySelectorAll('.pet-icon');
-
-for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('mouseover', () => {
-        cardsPhoto[i].classList.add('card-transform');
-        cardsTitle[i].classList.add('text-hover');
-        cardsDestination[i].classList.add('text-hover');
-        cardsIcons[i].classList.add('icon-hover');
-    })
-    cards[i].addEventListener('mouseout', () => {
-        cardsPhoto[i].classList.remove('card-transform');
-        cardsTitle[i].classList.remove('text-hover');
-        cardsDestination[i].classList.remove('text-hover');
-        cardsIcons[i].classList.remove('icon-hover');
-    })
-}
-
-// Credits animation
-
-const creditsLink = document.querySelector('.credits-link');
-const creditsLinkText = document.querySelectorAll('.credits-text');
-
-for (let i = 0; i < creditsLinkText.length; i++) {
-    creditsLink.addEventListener('mouseover', () => {
-        creditsLinkText[i].classList.add('credits-link-hover');
-    })
-    creditsLink.addEventListener('mouseout', () => {
-        creditsLinkText[i].classList.remove('credits-link-hover');
-    })
-}
-
 // Burger menu
 
 const menuButton = document.querySelector('.burger-menu-button');
@@ -138,15 +100,15 @@ const card7 = document.querySelector('.card7');
 const card8 = document.querySelector('.card8');
 
 const moveLeft = () => {
-    slider.classList.add('transition-left');
-    buttonLeft.removeEventListener('click', moveLeft);
-    buttonRight.removeEventListener('click', moveRight);
+    if (window.innerWidth > 980) slider.classList.add('transition-left');
+    if (window.innerWidth < 980) slider.classList.add('transition-left-tablet');   
     buttonLeft.setAttribute('disabled', true);
     buttonRight.setAttribute('disabled', true);
 };
 
 const moveRight = () => {
-    slider.classList.add('transition-right');
+    if (window.innerWidth > 980) slider.classList.add('transition-right');
+    if (window.innerWidth < 980) slider.classList.add('transition-right-tablet');  
     buttonLeft.setAttribute('disabled', true);
     buttonRight.setAttribute('disabled', true);
 };
@@ -199,13 +161,15 @@ buttonRight.addEventListener('click', () => {
 });
 
 slider.addEventListener('animationend', (event) => {
-    if (event.animationName === 'move-left') {
+    if (event.animationName === 'move-left' || event.animationName === 'move-left-tablet') {
         slider.classList.remove('transition-left');
+        slider.classList.remove('transition-left-tablet');
         itemRight.innerHTML = itemLeft.innerHTML;
         itemCenter.innerHTML = itemLeft.innerHTML;
 
-    } else if (event.animationName === 'move-right') {
+    } else if (event.animationName === 'move-right' || event.animationName === 'move-right-tablet') {
         slider.classList.remove('transition-right');
+        slider.classList.remove('transition-right-tablet');
         itemLeft.innerHTML = itemRight.innerHTML;
         itemCenter.innerHTML = itemRight.innerHTML;  
     }
