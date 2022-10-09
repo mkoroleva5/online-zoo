@@ -448,7 +448,7 @@ body {
   
 .transition-right {
     animation-name: move-right;
-    animation-duration: 1.5s;
+    animation-duration: 1.2s;
 }
   
 @keyframes move-left {
@@ -913,7 +913,7 @@ body {
     width: 100%;
     max-width: 1160px;
     margin-bottom: 18px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .testimonials-popups {
@@ -1088,7 +1088,7 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18.7%;
+    width: 12.5%;
     height: 7px;
     border-radius: 5px;
     background-color:#FE9013;
@@ -1097,7 +1097,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-    width: 18.7%;
+    width: 12.5%;
     height: 7px;
     border-radius: 5px;
     background-color:#FE9013;
@@ -1671,11 +1671,11 @@ input[type=range]::-moz-range-track {
         max-width: 638px;
     }
 
-    .transition-left {
+    .transition-left-tablet {
         animation-duration: 1s;
     }
   
-    .transition-right {
+    .transition-right-tablet {
         animation-duration: 1s;
     }    
 

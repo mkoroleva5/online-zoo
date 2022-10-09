@@ -437,6 +437,10 @@ body {
     transform: scale(1.15);
 }
 
+.amount-item:active .line-dot {
+    transform: scale(1);
+}
+
 .amount-radio {
     transform:scale(5);
     opacity: 0;

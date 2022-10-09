@@ -43,6 +43,11 @@ testimonialsSlider.addEventListener('input', () => {
     }
 });
 
+window.addEventListener('resize', () => {
+    testimonials.style.transform = 'translateX(0)';
+    testimonialsSlider.value = 0;
+});
+
 // Testimonials popup
 
 const testimonialCards = document.querySelectorAll('.testimonial-card');
