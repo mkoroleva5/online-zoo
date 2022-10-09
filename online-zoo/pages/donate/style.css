@@ -437,6 +437,10 @@ body {
     transform: scale(1.15);
 }
 
+.amount-item:active .line-dot {
+    transform: scale(1);
+}
+
 .amount-radio {
     transform:scale(5);
     opacity: 0;
@@ -958,7 +962,7 @@ input[type=number] {
     text-decoration: none;
 }
 
-.credits-link-hover {
+.credits-link:hover .credits-text {
     color: #4B9200;
     border-bottom: 2px solid #4B9200;
 }

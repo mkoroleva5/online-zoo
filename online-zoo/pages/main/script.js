@@ -1,41 +1,3 @@
-// Cards animation
-
-const cards = document.querySelectorAll('.pet-card');
-const cardsPhoto = document.querySelectorAll('.pet-photo');
-const cardsText = document.querySelectorAll('.pet-text');
-const cardsTitle = document.querySelectorAll('.pet-title');
-const cardsDestination = document.querySelectorAll('.pet-destination');
-const cardsIcons = document.querySelectorAll('.pet-icon');
-
-for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('mouseover', () => {
-        cardsPhoto[i].classList.add('card-transform');
-        cardsTitle[i].classList.add('text-hover');
-        cardsDestination[i].classList.add('text-hover');
-        cardsIcons[i].classList.add('icon-hover');
-    })
-    cards[i].addEventListener('mouseout', () => {
-        cardsPhoto[i].classList.remove('card-transform');
-        cardsTitle[i].classList.remove('text-hover');
-        cardsDestination[i].classList.remove('text-hover');
-        cardsIcons[i].classList.remove('icon-hover');
-    })
-}
-
-// Credits animation
-
-const creditsLink = document.querySelector('.credits-link');
-const creditsLinkText = document.querySelectorAll('.credits-text');
-
-for (let i = 0; i < creditsLinkText.length; i++) {
-    creditsLink.addEventListener('mouseover', () => {
-        creditsLinkText[i].classList.add('credits-link-hover');
-    })
-    creditsLink.addEventListener('mouseout', () => {
-        creditsLinkText[i].classList.remove('credits-link-hover');
-    })
-}
-
 // Burger menu
 
 const menuButton = document.querySelector('.burger-menu-button');
@@ -67,7 +29,6 @@ document.addEventListener('click', (event) => {
     if ( !click ) closeBurgerMenu();
 });
 
-
 // Testimonials slider
 
 const testimonials = document.querySelector('.testimonials-cards-wrapper');
@@ -80,6 +41,11 @@ testimonialsSlider.addEventListener('input', () => {
     } else if (window.innerWidth <= 1001) {
         testimonials.style.transform = `translateX(-${testimonialsSlider.value*323}px)`;
     }
+});
+
+window.addEventListener('resize', () => {
+    testimonials.style.transform = 'translateX(0)';
+    testimonialsSlider.value = 0;
 });
 
 // Testimonials popup
@@ -118,3 +84,100 @@ document.addEventListener('click', (event) => {
 for (let i = 0; i < closePopupButton.length; i++) {
     closePopupButton[i].addEventListener('click', closePopups);
 }
+
+// Main slider
+
+const slider = document.querySelector('.slider');
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+const itemLeft = document.querySelector('.item-left');
+const itemCenter = document.querySelector('.item-active');
+const itemRight = document.querySelector('.item-right');
+
+const card1 = document.querySelector('.card1');
+const card2 = document.querySelector('.card2');
+const card3 = document.querySelector('.card3');
+const card4 = document.querySelector('.card4');
+const card5 = document.querySelector('.card5');
+const card6 = document.querySelector('.card6');
+const card7 = document.querySelector('.card7');
+const card8 = document.querySelector('.card8');
+
+const moveLeft = () => {
+    if (window.innerWidth > 980) slider.classList.add('transition-left');
+    if (window.innerWidth < 980) slider.classList.add('transition-left-tablet');   
+    buttonLeft.setAttribute('disabled', true);
+    buttonRight.setAttribute('disabled', true);
+};
+
+const moveRight = () => {
+    if (window.innerWidth > 980) slider.classList.add('transition-right');
+    if (window.innerWidth < 980) slider.classList.add('transition-right-tablet');  
+    buttonLeft.setAttribute('disabled', true);
+    buttonRight.setAttribute('disabled', true);
+};
+
+let cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8];
+
+const generateLeft = () => {
+    let randomCards = [];
+    while (randomCards.length < 6) {
+        let num = Math.floor(Math.random() * 8);
+        randomCards.push(cardsArray[num]);
+        randomCards = [...new Set(randomCards)];
+    }
+    itemLeft.innerHTML = '';
+    itemLeft.appendChild(randomCards[0]);
+    itemLeft.appendChild(randomCards[1]);
+    itemLeft.appendChild(randomCards[2]);
+    itemLeft.appendChild(randomCards[3]);
+    itemLeft.appendChild(randomCards[4]);
+    itemLeft.appendChild(randomCards[5]);
+}
+
+const generateRight = () => {
+    let randomCards = [];
+    while (randomCards.length < 6) {
+        let num = Math.floor(Math.random() * 8);
+        randomCards.push(cardsArray[num]);
+        randomCards = [...new Set(randomCards)];
+    }
+    itemRight.innerHTML = '';
+    itemRight.appendChild(randomCards[0]);
+    itemRight.appendChild(randomCards[1]);
+    itemRight.appendChild(randomCards[2]);
+    itemRight.appendChild(randomCards[3]);
+    itemRight.appendChild(randomCards[4]);
+    itemRight.appendChild(randomCards[5]);
+}
+
+generateRight();
+itemCenter.innerHTML = itemRight.innerHTML;
+
+buttonLeft.addEventListener('click', () => {
+    generateLeft();
+    moveLeft();
+});
+
+buttonRight.addEventListener('click', () => {
+    generateRight();
+    moveRight();
+});
+
+slider.addEventListener('animationend', (event) => {
+    if (event.animationName === 'move-left' || event.animationName === 'move-left-tablet') {
+        slider.classList.remove('transition-left');
+        slider.classList.remove('transition-left-tablet');
+        itemRight.innerHTML = itemLeft.innerHTML;
+        itemCenter.innerHTML = itemLeft.innerHTML;
+
+    } else if (event.animationName === 'move-right' || event.animationName === 'move-right-tablet') {
+        slider.classList.remove('transition-right');
+        slider.classList.remove('transition-right-tablet');
+        itemLeft.innerHTML = itemRight.innerHTML;
+        itemCenter.innerHTML = itemRight.innerHTML;  
+    }
+    buttonLeft.removeAttribute('disabled');
+    buttonRight.removeAttribute('disabled');
+});
