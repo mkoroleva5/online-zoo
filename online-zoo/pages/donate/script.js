@@ -1,27 +1,3 @@
-// Period form animation
-/*
-const options = document.querySelectorAll('.period-option');
-const optionDots = document.querySelectorAll('.period-option-dot');
-
-for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener('mouseover', () => {
-        optionDots[i].classList.add('hover-option-dot');
-        
-    })
-    options[i].addEventListener('mouseout', () => {
-        optionDots[i].classList.remove('hover-option-dot');
-        
-    })
-}
-
-for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener('click', () => {
-        optionDots[0].classList.remove('active-option-dot');
-        optionDots[1].classList.remove('active-option-dot');
-        optionDots[i].classList.add('active-option-dot');  
-    })
-}
-*/
 // Panda gif 
 
 const feedButton = document.querySelector('.feed-button');
@@ -49,20 +25,7 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Credits animation
-
-const creditsLink = document.querySelector('.credits-link');
-const creditsLinkText = document.querySelectorAll('.credits-text');
-
-for (let i = 0; i < creditsLinkText.length; i++) {
-    creditsLink.addEventListener('mouseover', () => {
-        creditsLinkText[i].classList.add('credits-link-hover');
-    })
-    creditsLink.addEventListener('mouseout', () => {
-        creditsLinkText[i].classList.remove('credits-link-hover');
-    })
-}
-
+/*
 // Amount item checked
 
 const amountItems = document.querySelectorAll('.amount-radio');
@@ -80,8 +43,8 @@ function changeChecked () {
 }
 
 window.addEventListener('resize', changeChecked);
+*/
 
-/*
 // Amount input
 
 const amountItems = document.querySelectorAll('.amount-radio');
@@ -95,7 +58,7 @@ for (let i = 0; i < amountSums.length; i++) {
     });
 
     amountInput.addEventListener('input', () => {
-
+        amountItems[i].checked = false;
         setTimeout (() => { 
             if (amountInput.value.length > 4) {
                 amountInput.value = amountInput.value.substr(0, 4);
@@ -139,7 +102,7 @@ for (let i = 0; i < amountSums.length; i++) {
         }
     });
 }
-*/
+
 // Burger menu
 
 const menuButton = document.querySelector('.burger-menu-button');
