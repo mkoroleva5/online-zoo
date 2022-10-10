@@ -575,6 +575,41 @@ body {
     background-size: cover;
 }
 
+.card9 > .pet-photo {
+    background-image: url('../../assets/images/giraffe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card10 > .pet-photo {
+    background-image: url('../../assets/images/red_panda.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card11 > .pet-photo {
+    background-image: url('../../assets/images/quokka.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card12 > .pet-photo {
+    background-image: url('../../assets/images/koala.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card13 > .pet-photo {
+    background-image: url('../../assets/images/fennec_fox.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .pet-text {
     width: 100%;
     height: 14%;
@@ -604,8 +639,7 @@ body {
 }
 
 .pet-card:hover .pet-title,
-.pet-card:hover .pet-destination
- {
+.pet-card:hover .pet-destination {
     color: white;
     transform: translateY(-70px);
     font-size: 22px;
@@ -621,6 +655,9 @@ body {
     filter: brightness(50%);
 }
 
+.koala > .pet-text > .pet-icon,
+.quokka > .pet-text > .pet-icon,
+.giraffe > .pet-text > .pet-icon,
 .pandas > .pet-text > .pet-icon,
 .gorilla > .pet-text > .pet-icon,
 .sloth > .pet-text > .pet-icon,
@@ -634,6 +671,8 @@ body {
     transition: 0.2s;
 }
 
+.fennec > .pet-text > .pet-icon,
+.red-panda > .pet-text > .pet-icon,
 .eagles > .pet-text > .pet-icon,
 .alligators > .pet-text > .pet-icon,
 .cheetahs > .pet-text > .pet-icon,
@@ -2074,6 +2113,9 @@ input[type=range]::-moz-range-track {
         display: block;
     }
 
+    .koala > .pet-text > .pet-icon,
+    .quokka > .pet-text > .pet-icon,
+    .giraffe > .pet-text > .pet-icon,
     .pandas > .pet-text > .pet-icon,
     .gorilla > .pet-text > .pet-icon,
     .sloth > .pet-text > .pet-icon,
@@ -2086,6 +2128,8 @@ input[type=range]::-moz-range-track {
         background-size: 87% 87%;
     }
     
+    .fennec > .pet-text > .pet-icon,
+    .red-panda > .pet-text > .pet-icon,
     .eagles > .pet-text > .pet-icon,
     .alligators > .pet-text > .pet-icon,
     .cheetahs > .pet-text > .pet-icon,
